@@ -13,13 +13,18 @@
             "findUserById": findUserById,
             "registerUser": registerUser,
             "updateUser": updateUser,
-            "deleteUser" : deleteUser
+            "deleteUser" : deleteUser,
+            "getAllUsers" : getAllUsers
 
         };
         return api;
 
 
+        function getAllUsers() {
+            var url = "/api/users";
+            return $http.get(url);
 
+        }
         function updateUser(userId, user) {
             var url = "/api/user/" + userId;
             return $http.put(url,user);

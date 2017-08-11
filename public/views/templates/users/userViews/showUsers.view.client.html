@@ -1,0 +1,23 @@
+<div class="container-fluid">
+<table style="width:100%;border: 1px solid black">
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Sex</th>
+    <th>WishList</th>
+</table>
+
+
+<div ng-repeat="userVar in model.users">
+    <table style="width:100%;border: 1px solid black">
+        <tr>
+            <td>{{userVar.firstName}}</td>
+            <td>{{userVar.lastName}}</td>
+            <td>{{userVar.sex}}</td>
+            <td>{{userVar.wishlist}}</td>
+        </tr>
+    </table>
+</div>
+
+
+</div>
+

@@ -8,11 +8,16 @@ userModel.updateUser = updateUser;
 userModel.findUserByCredentials = findUserByCredentials;
 userModel.findUserByUsername = findUserByUsername;
 userModel.deleteUserById = deleteUserById;
+userModel.getAllUsers = getAllUsers;
 
 module.exports = userModel;
 
 
+function getAllUsers() {
 
+    return userModel.find({});
+
+}
 function deleteUserById(userId) {
     return userModel.remove({_id:userId});
 

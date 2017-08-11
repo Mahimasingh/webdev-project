@@ -4,17 +4,10 @@ var userModel = require("../models/user/user.model.server");
 
 
 app.get("/api/users",getAllUsers);
-
 app.get("/api/user/:userId",getUserById);
-
-
-
 app.get("/api/user",findUser);
-
 app.post("/api/user",registerUser);
-
 app.put("/api/user/:userId",updateUser);
-
 app.delete("/api/user/:userId",deleteUser);
 
 
@@ -36,7 +29,11 @@ function deleteUser(req,res) {
 
 
 function getAllUsers(req,response) {
-    response.send(users);
+    userModel
+        .getAllUsers()
+        .then(function(res){
+            response.json(res);
+        })
 }
 
 function getUserById(req,response) {

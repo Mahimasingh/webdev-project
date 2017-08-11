@@ -5,7 +5,7 @@ var userSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
     email: String,
-    Sex: String,
+    sex: String,
     address: String,
     dateCreated: {type: Date, default: Date.now()},
     wishlist: {type:mongoose.Schema.Types.ObjectId,ref: "wishListModel"},
