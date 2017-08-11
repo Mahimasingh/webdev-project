@@ -1,0 +1,40 @@
+html{
+    background: url(../../../background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.brand-name{
+    font-family: "Papyrus";
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.login-button
+{
+    width: 100%;
+}
+
+.username
+{
+    width: 50%;
+    font-family: Papyrus;
+    font-size: 20px;
+    color: #843534;
+}
+
+.password
+{
+    width: 50%;
+    font-family: Papyrus;
+    font-size: 20px;
+    color: #843534;
+}
+
+.container-fluid.pull-right.username.facebook-icon{
+    margin-top : auto;
+
+}
+
