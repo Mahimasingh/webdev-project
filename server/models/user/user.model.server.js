@@ -1,14 +1,16 @@
 var mongoose = require("mongoose");
 var userSchema = require("./user.schema.server");
 var db = require("../../database");
-var userModel = mongoose.model("UserModel", userSchema);
+var userModel = mongoose.model("userModel", userSchema);
 userModel.createUser = createUser;
 userModel.findUserById = findUserById;
 userModel.updateUser = updateUser;
 userModel.findUserByCredentials = findUserByCredentials;
 userModel.findUserByUsername = findUserByUsername;
 userModel.deleteUserById = deleteUserById;
+
 module.exports = userModel;
+
 
 
 function deleteUserById(userId) {

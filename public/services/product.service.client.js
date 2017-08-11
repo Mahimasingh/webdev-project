@@ -14,7 +14,7 @@
 
         function getProductByType(type) {
             var url = "/api/product/" + type;
-            return $http.put(url);
+            return $http.get(url);
 
         }
 

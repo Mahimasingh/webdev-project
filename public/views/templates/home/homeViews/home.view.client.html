@@ -1,6 +1,6 @@
 
 
-
+<div class="home-view">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,8 +72,13 @@
                 <div class="modal-dialog">
 
                     <!-- Modal content-->
+
                     <div class="modal-content container-fluid">
-                        <br>
+                        <div ng-show="model.errorMessage" class="alert alert-danger">
+                            {{model.errorMessage}}
+                        </div>
+
+                            <br>
                         <div class="username">
                             <label for="username">Username</label>
                             <input name ="username"
@@ -132,6 +137,6 @@
 
     </div><!-- /.container-fluid -->
 </nav>
-
+</div>
 
 

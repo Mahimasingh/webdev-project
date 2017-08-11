@@ -14,8 +14,11 @@
             "registerUser": registerUser,
             "updateUser": updateUser,
             "deleteUser" : deleteUser
+
         };
         return api;
+
+
 
         function updateUser(userId, user) {
             var url = "/api/user/" + userId;

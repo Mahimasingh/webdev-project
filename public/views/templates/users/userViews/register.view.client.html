@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ESTILO</title>
-    <link href ="../../../../vendor/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <link href="../../css/register-style.css" rel="stylesheet">
-</head>
-<body>
-
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -30,6 +18,7 @@
             <ul class="nav navbar-nav">
 
 
+
                 <li class="dropdown">
                     <a
                             class="dropdown-toggle"
@@ -40,15 +29,15 @@
 
 
                     <ul class="dropdown-menu">
-                        <li><a ng-click="model.fetchProductsByType('CLOTHING')">Clothing</a></li>
-                        <li><a ng-click="model.fetchProductsByType('WATCHES')">Watches</a></li>
+                        <li><a href="#!/product/CLOTHING">Clothing</a></li>
+                        <li><a href="#!/product/WATCHES">Watches</a></li>
 
-                        <li><a ng-click="model.fetchProductsByType('BAGS')">Bags</a></li>
-                        <li><a ng-click="model.fetchProductsByType('SHOES')">Shoes</a></li>
+                        <li><a href="#!/product/BAGS">Bags</a></li>
+                        <li><a href="#!/product/SHOES">Shoes</a></li>
 
-                        <li><a ng-click="model.fetchProductsByType('ACCESSORIES')">Accessories</a></li>
-                        <li><a ng-click="model.fetchProductsByType('JEWELLERY')">Jewellery</a></li>
-                        <li><a ng-click="model.fetchProductsByType('SUNGLASSES')">Sunglasses</a></li>
+                        <li><a href="#!/product/ACCESSORIES">Accessories</a></li>
+                        <li><a href="#!/product/JEWELLERY">Jewellery</a></li>
+                        <li><a href="#!/product/SUNGLASSES">Sunglasses</a></li>
                     </ul>
                 </li>
 
@@ -64,21 +53,27 @@
 
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../home/contact.html">Contact Us</a></li></ul><!-- /.navbar-collapse -->
+                <li><a href="../../home/homeViews/contact.html">Contact Us</a></li></ul><!-- /.navbar-collapse -->
 
         </div>
     </div><!-- /.container-fluid -->
 </nav>
 
 <div class="register-form container-fluid">
+
     <h3>User Registration</h3>
     <br>
+
+    <div ng-show="model.errorMessage" class="alert alert-danger">
+        {{model.errorMessage}}
+    </div>
 
 
     <label for="username">Username</label>
     <input name ="username"
            class="form-control"
            id="username"
+           ng-model="model.user.username"
            placeholder="alice"/>
     <br>
 
@@ -87,6 +82,7 @@
            type="password"
            class="form-control"
            id="password"
+           ng-model="model.user.password"
            placeholder="pdr$%^G"/>
 
     <br>
@@ -104,6 +100,7 @@
            type="text"
            class="form-control"
            id="first name"
+           ng-model="model.user.firstName"
            placeholder="Alice"/>
 
     <br>
@@ -113,6 +110,7 @@
            type="text"
            class="form-control"
            id="last Name"
+           ng-model="model.user.lastName"
            placeholder="Brown"/>
     <br>
 
@@ -123,12 +121,31 @@
            type="text"
            class="form-control"
            id="sex"
+           ng-model="model.user.sex"
            placeholder="Female"/>
+
+    <br>
+
+    <label for="email">Email</label>
+    <input name ="email"
+           type="email"
+           class="form-control"
+           id="email"
+           ng-model="model.user.email"
+           placeholder="alice@google.com"/>
+
+    <br>
+    <label for="address">Address</label>
+    <input name ="address"
+           class="form-control"
+           id="address"
+           ng-model="model.user.address"
+           placeholder="170 Parker Hill Avenue"/>
 
     <br>
     <div class="register-button">
     <a class="btn btn-default btn-block btn-primary"
-       href="profile.html"
+       ng-click="model.register(model.user)"
        role="button">Register</a>
     </div>
 
@@ -136,13 +153,9 @@
 
     <div class="cancel-button">
     <a class="btn btn-default btn-block btn-danger"
-       href="login.html"
+       href="#!/"
        role="button">Cancel</a>
     </div>
 
 </div>
 
-
-
-</body>
-</html>

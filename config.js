@@ -7,7 +7,7 @@
 
         $routeProvider
             .when("/", {
-            templateUrl: "public/views/templates/home/home.view.client.html",
+            templateUrl: "public/views/templates/home/homeViews/home.view.client.html",
             controller : "homeController",
             controllerAs : "model"
 
@@ -15,49 +15,54 @@
 
 
             .when("/register", {
-                templateUrl: "public/views/templates/users/register.view.client.html",
+                templateUrl: "public/views/templates/users/userViews/register.view.client.html",
                 controller: "registerController",
                 controllerAs: "model"
             })
             .when("/profile/:userId", {
-                templateUrl: "public/views/templates/users/profile.view.client.html",
+                templateUrl: "public/views/templates/users/userViews/profile.view.client.html",
                 controller: "profileController",
                 controllerAs: "model"
             })
+            .when("/user/:userId/showUsers",{
+                templateUrl : "public/views/templates/users/userViews/showUsers.view.client.html",
+                controller: "showUsersController",
+                controllerAs: "model"
+            })
             .when("/user/:userId/shoppingCart",{
-                templateUrl : "public/views/templates/users/shoping-cart.view.client.html",
+                templateUrl : "public/views/templates/users/shoppingCartViews/shopping-cart.view.client.html",
                 controller : "shoppingCartViewController",
                 controllerAs: "model"
 
             })
             .when("/user/:userId/wishList",{
-                templateUrl : "public/views/templates/users/wishList-list.view.client.html",
+                templateUrl : "public/views/templates/users/wishListViews/wishList-list.view.client.html",
                 controller : "wishlistViewController",
                 controllerAs: "model"
 
             })
             .when("/user/:userId/shoppingCart/:shoppingCart",{
-                templateUrl: "public/views/templates/users/shoping-cart-edit.view.client.html",
+                templateUrl: "public/views/templates/users/shoppingCartViews/shopping-cart-edit.view.client.html",
                 controller : "shoppingCartEditController",
                 controllerAs: "model"
 
 
             })
             .when("/user/:userId/wishlist/:wishlist",{
-                templateUrl: "public/views/templates/users/wishList-edit.view.client.html",
+                templateUrl: "public/views/templates/users/wishListViews/wishList-edit.view.client.html",
                 controller : "wishlistEditController",
                 controllerAs: "model"
 
 
             })
             .when("/user/:userId/likes",{
-                templateUrl: "public/views/templates/users/likes.view.client.html",
+                templateUrl: "public/views/templates/users/userViews/likes.view.client.html",
                 controller: "likesController",
                 controllerAs: "model"
             })
 
             .when("/product/:productType",{
-                templateUrl : "public/views/templates/products/product-list-customer.view.client.html",
+                templateUrl : "public/views/templates/products/productViews/product-list-customer.view.client.html",
                 controller: "productListController",
                 controllerAs: "model"
         })

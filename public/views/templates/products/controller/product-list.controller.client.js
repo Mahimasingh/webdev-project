@@ -12,8 +12,8 @@
 
         function init() {
 
-            function getProductsByType() {
-                productService.getProductbyType(model.productType)
+
+                productService.getProductByType(model.productType)
                     .then(function (response) {
 
                         model.products = response.data;
@@ -21,7 +21,7 @@
                     })
 
 
-            }
+
 
 
         }

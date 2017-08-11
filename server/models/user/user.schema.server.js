@@ -6,6 +6,7 @@ var userSchema = mongoose.Schema({
     lastName: String,
     email: String,
     Sex: String,
+    address: String,
     dateCreated: {type: Date, default: Date.now()},
     wishlist: {type:mongoose.Schema.Types.ObjectId,ref: "wishListModel"},
     shoppingCart: {type: mongoose.Schema.Types.ObjectId, ref: "shoppingCartModel"},

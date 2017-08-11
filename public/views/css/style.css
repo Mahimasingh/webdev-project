@@ -1,4 +1,4 @@
-html{
+.home-view{
     background: url(../../../background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -7,7 +7,7 @@ html{
 }
 
 .brand-name{
-    font-family: "Papyrus";
+    font-family: "Calibri";
     font-weight: 100;
     font-size: 40px;
 }
@@ -20,7 +20,7 @@ html{
 .username
 {
     width: 50%;
-    font-family: Papyrus;
+    font-family: Calibri;
     font-size: 20px;
     color: #843534;
 }
@@ -28,7 +28,7 @@ html{
 .password
 {
     width: 50%;
-    font-family: Papyrus;
+    font-family: Calibri;
     font-size: 20px;
     color: #843534;
 }

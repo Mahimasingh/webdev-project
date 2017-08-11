@@ -9,7 +9,7 @@ body{
 }
 
 .brand-name{
-    font-family: "Papyrus";
+    font-family: "Calibri";
     font-weight: 100;
     font-size: 40px;
 }
@@ -17,14 +17,14 @@ body{
 .username
 {
     width: 25%;
-    font-family: Papyrus;
+    font-family: Calibri;
     font-size: 40px;
 }
 
 .password
 {
     width: 25%;
-    font-family: Papyrus;
+    font-family: Calibri;
     font-size: 40px;
 }
 
@@ -39,11 +39,11 @@ body{
 
 h3
 {
-    font-family: Papyrus;
+    font-family: Calibri;
     font-weight: 100;
     font-size: 25px;
 }
 
 .register-form{
-    font-family: Papyrus;
+    font-family: Calibri;
 }

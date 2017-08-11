@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var userSchema = require("./product.model.server");
+var productSchema = require("./product.schema.server");
 
 var productModel = mongoose.model("productModel", productSchema);
 
