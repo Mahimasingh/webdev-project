@@ -24,8 +24,8 @@
                     }
                 })
                 .then(function (response) {
-                    var _user = response.data;
-                    $location.url("/profile/" + _user._id);
+                    var varUser = response.data; //here you are getting back shoppingCart
+                    $location.url("/profile/" + varUser._user);
                 });
         }
     }

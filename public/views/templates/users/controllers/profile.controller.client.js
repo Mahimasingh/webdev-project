@@ -38,14 +38,7 @@
 
         }
 
-        // function getCartByUserId(user) {
-        //     userService.getCartForUser(user._id)
-        //         .then(function (response) {
-        //             $location.url("/user/:userId/shoppingCart");
-        //
-        //         })
-        //
-        // }
+
 
 
     }
