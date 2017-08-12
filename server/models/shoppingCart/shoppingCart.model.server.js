@@ -7,7 +7,7 @@ shoppingCartModel.createShoppingCart = createShoppingCart;
 module.exports = shoppingCartModel;
 
 function createShoppingCart(userId) {
-    shoppingCartModel.insert({_user : userId});
+    return shoppingCartModel.create({_user : userId});
 
 }
 

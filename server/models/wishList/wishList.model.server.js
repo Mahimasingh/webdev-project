@@ -14,6 +14,6 @@ function getWishListByUserId(userId) {
 }
 
 function createWishList(userId) {
-    wishListModel.insert({_user : userId});
+    return wishListModel.create({_user : userId});
 
 }

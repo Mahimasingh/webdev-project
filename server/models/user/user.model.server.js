@@ -41,9 +41,9 @@ function createUser(user) {
             return wishListModel
                    .createWishList(user._id);
         })
-        .then(function (createdWishlist) {
+        .then(function (createdWishList) {
             return shoppingCartModel
-                .createShoppingCart(createdWishlist._user);;
+                .createShoppingCart(createdWishList._user);
         });
 }
 
