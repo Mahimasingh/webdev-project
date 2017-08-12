@@ -9,7 +9,7 @@ module.exports = wishListModel;
 
 function getWishListByUserId(userId) {
 
-    return wishListModel.find({_user : userId});
+    return wishListModel.findOne({_user : userId});
 
 }
 

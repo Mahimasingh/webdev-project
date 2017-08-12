@@ -1,7 +1,7 @@
 (function () {
     angular
         .module("estiloApp")
-        .factory("userService", userService);
+        .service("userService", userService);
 
     function userService($http) {
 
@@ -14,12 +14,20 @@
             "registerUser": registerUser,
             "updateUser": updateUser,
             "deleteUser" : deleteUser,
-            "getAllUsers" : getAllUsers
+            "getAllUsers" : getAllUsers,
+            "addWishListToFollowingList" : addWishListToFollowingList
 
         };
         return api;
 
 
+        function addWishListToFollowingList(userId,wishListId,wishList) {
+            console.log("Entered the User Service");
+            var url = "/api/user/"+ userId +"/wishList/" + wishListId;
+            return $http.put(url,wishList);
+
+            
+        }
         function getAllUsers() {
             var url = "/api/users";
             return $http.get(url);

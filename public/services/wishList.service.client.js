@@ -9,6 +9,7 @@
 
         var api = {
             "getWishByUserId": getWishByUserId
+
         };
         return api;
 
@@ -17,6 +18,8 @@
             return $http.get(url);
 
         }
+
+
 
 
     }

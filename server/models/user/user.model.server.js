@@ -11,10 +11,19 @@ userModel.findUserByCredentials = findUserByCredentials;
 userModel.findUserByUsername = findUserByUsername;
 userModel.deleteUserById = deleteUserById;
 userModel.getAllUsers = getAllUsers;
+userModel.addToWishListArray = addToWishListArray;
 
 module.exports = userModel;
 
+function addToWishListArray(userId,wishListId) {
+    return userModel.findUserById(userId)
+        .then(function (user) {
+            user.follow_wishlist.push(wishListId);
+            return user.save();
 
+        })
+
+}
 function getAllUsers() {
 
     return userModel.find({});

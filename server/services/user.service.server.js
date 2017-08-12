@@ -9,6 +9,21 @@ app.get("/api/user",findUser);
 app.post("/api/user",registerUser);
 app.put("/api/user/:userId",updateUser);
 app.delete("/api/user/:userId",deleteUser);
+app.put("/api/user/:userId/wishList/:wishListId", addToWishList);
+
+function addToWishList(req,res) {
+
+    var userId = req.params.userId;
+    var wishListId = req.params.wishListId;
+    userModel
+        .addToWishListArray(userId,wishListId)
+        .then(function (response) {
+            res.json(response);
+
+        })
+
+
+}
 
 
 

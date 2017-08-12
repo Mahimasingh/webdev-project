@@ -4,13 +4,11 @@
         .module("estiloApp")
         .controller("showUsersController", showUsersController);
 
-    function showUsersController($routeParams,userService) {
+    function showUsersController($routeParams,userService,wishListService) {
         var model = this;
         var userId = $routeParams["userId"];
         model.userId = userId;
         model.addWishListToUserFollowers = addWishListToUserFollowers;
-
-
 
         function init() {
 
@@ -33,17 +31,25 @@
         }
         init();
 
-        function addWishListToUserFollowers(wishListId) {
-            userService.addtoFollowers(wishListId)
-                .then(function (response) {
-                    model.message = "Successfully Added!"
+        function addWishListToUserFollowers(userToFollowId) {
+            wishListService.getWishByUserId(userToFollowId)
+                .then(function (wishList) {
+                    return userService.
+                    addWishListToFollowingList(model.userId,wishList.data._id,wishList);
 
+
+                        })
+                .then(function (response) {
+
+                    model.message = "Added to your WishList";
                 })
 
         }
 
-
-
-
     }
+
+
+
+
+
 })();

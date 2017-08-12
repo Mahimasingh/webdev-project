@@ -8,8 +8,8 @@ var userSchema = mongoose.Schema({
     sex: String,
     address: String,
     dateCreated: {type: Date, default: Date.now()},
-    wishlist: {type:mongoose.Schema.Types.ObjectId,ref: "wishListModel"},
-    shoppingCart: {type: mongoose.Schema.Types.ObjectId, ref: "shoppingCartModel"},
+    //wishlist: {type:mongoose.Schema.Types.ObjectId,ref: "wishListModel"},
+   // shoppingCart: {type: mongoose.Schema.Types.ObjectId, ref: "shoppingCartModel"},
     follow_wishlist: [{type: mongoose.Schema.Types.ObjectId, ref: "wishListModel"}],
     isAdmin: Boolean
 }, {collection: "user"});
