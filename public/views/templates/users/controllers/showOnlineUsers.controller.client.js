@@ -7,7 +7,8 @@
     function showUsersController($routeParams,userService) {
         var model = this;
         var userId = $routeParams["userId"];
-
+        model.userId = userId;
+        model.addWishListToUserFollowers = addWishListToUserFollowers;
 
 
 
@@ -29,13 +30,17 @@
                     model.users = _users;
 
                 })
-
-
-
-
-
         }
         init();
+
+        function addWishListToUserFollowers(wishListId) {
+            userService.addtoFollowers(wishListId)
+                .then(function (response) {
+                    model.message = "Successfully Added!"
+
+                })
+
+        }
 
 
 

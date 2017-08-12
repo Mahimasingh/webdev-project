@@ -7,6 +7,7 @@ var productSchema = mongoose.Schema({
     type: { type: String, enum: productTypes, required: true },
     quantity:{type: Number},
     url: String,
+    price : {type: Number},
     company: String,
     reviews : {type: Number}
 }, {collection: "product"});

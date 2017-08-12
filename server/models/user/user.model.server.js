@@ -1,5 +1,7 @@
 var mongoose = require("mongoose");
 var userSchema = require("./user.schema.server");
+var wishListModel = require("../wishList/wishList.model.server");
+var shoppingCartModel = require("../shoppingCart/shoppingCart.model.server");
 var db = require("../../database");
 var userModel = mongoose.model("userModel", userSchema);
 userModel.createUser = createUser;
@@ -33,7 +35,16 @@ function updateUser(userId, user) {
 }
 
 function createUser(user) {
-    return userModel.create(user);
+    return userModel
+        .create(user)
+        .then(function (user) {
+            return wishListModel
+                   .createWishList(user._id);
+        })
+        .then(function (createdWishlist) {
+            return shoppingCartModel
+                .createShoppingCart(createdWishlist._user);;
+        });
 }
 
 function findUserById(userId) {

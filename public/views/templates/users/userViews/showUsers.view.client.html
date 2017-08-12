@@ -1,23 +1,33 @@
 <div class="container-fluid">
-<table style="width:100%;border: 1px solid black">
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Sex</th>
-    <th>WishList</th>
-</table>
+
+    <div ng-show="model.message" class="alert alert-success">
+        {{model.message}}
+    </div>
 
 
 <div ng-repeat="userVar in model.users">
+
     <table style="width:100%;border: 1px solid black">
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Sex</th>
+        <th>WishList</th>
+        <th>Follow Button</th>
+
         <tr>
             <td>{{userVar.firstName}}</td>
             <td>{{userVar.lastName}}</td>
             <td>{{userVar.sex}}</td>
             <td>{{userVar.wishlist}}</td>
+            <td><a ng-click="model.addWishListToUserFollowers(userVar.wishList)"
+                    class="btn btn-default">Follow</a>
+
+            </td>
         </tr>
     </table>
-</div>
-
 
 </div>
 
+
+</div>
+d
