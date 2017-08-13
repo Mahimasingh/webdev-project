@@ -1,1 +1,32 @@
-<h3>{{model.following}}</h3>
+
+<!--<h3>{{model.following}}</h3>-->
+
+<div class="container-fluid">
+
+    <div ng-show="model.message" class="alert alert-danger">
+        {{model.message}}
+    </div>
+
+    <h2>You are following the below Wishlists</h2>
+
+
+    <ul ng-repeat="wishListId in model.following">
+        <li>
+            <h3>
+               {{wishListId._user.firstName}}
+                <div ng-click="model.removeWishListFromFollowing(wishListId._id)" class="btn btn-default btn-danger pull-right">
+                    Unfollow</div>
+            </h3>
+
+
+            <ul ng-repeat="product in wishListId._products">
+                <l1>
+                    <h5>{{product}}</h5>
+                </l1>
+            </ul>
+        </li>
+
+    </ul>
+
+
+</div>

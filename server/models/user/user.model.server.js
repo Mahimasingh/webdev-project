@@ -12,8 +12,20 @@ userModel.findUserByUsername = findUserByUsername;
 userModel.deleteUserById = deleteUserById;
 userModel.getAllUsers = getAllUsers;
 userModel.addToWishListArray = addToWishListArray;
+userModel.deleteWishListFromFollowingArray = deleteWishListFromFollowingArray;
 
 module.exports = userModel;
+
+function deleteWishListFromFollowingArray(userId,wishListId) {
+    return userModel.findUserById(userId)
+        .then(function (user) {
+            var index = user.follow_wishlist.indexOf(wishListId);
+            user.follow_wishlist.splice(index,1);
+            return user.save();
+
+        })
+
+}
 
 function addToWishListArray(userId,wishListId) {
     return userModel.findUserById(userId)
@@ -57,7 +69,17 @@ function createUser(user) {
 }
 
 function findUserById(userId) {
-    return userModel.findById(userId);
+    return userModel
+        .findById(userId)
+        .populate({path : 'follow_wishlist',
+                    populate: {path : '_products'}
+                    })
+        .populate({path : 'follow_wishlist',
+                    populate: {path : '_user'}})
+        .exec();
+
+
+
 }
 
 function findUserByUsername(username) {

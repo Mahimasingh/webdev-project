@@ -10,6 +10,18 @@ app.post("/api/user",registerUser);
 app.put("/api/user/:userId",updateUser);
 app.delete("/api/user/:userId",deleteUser);
 app.put("/api/user/:userId/wishList/:wishListId", addToWishList);
+app.delete("/api/user/:userId/wishList/:wishList",deleteFromWishList);
+
+function deleteFromWishList(req,res) {
+    var userId = req.params.userId;
+    var wishListId = req.params.wishListId;
+    userModel
+        .deleteWishListFromFollowingArray(userId,wishListId)
+        .then(function (response) {
+            res.json(response);
+
+        })
+}
 
 function addToWishList(req,res) {
 

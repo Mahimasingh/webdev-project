@@ -15,12 +15,16 @@
             "updateUser": updateUser,
             "deleteUser" : deleteUser,
             "getAllUsers" : getAllUsers,
-            "addWishListToFollowingList" : addWishListToFollowingList
+            "addWishListToFollowingList" : addWishListToFollowingList,
+            "removeWishListFromArray" : removeWishListFromArray
 
         };
         return api;
 
-
+        function removeWishListFromArray(userId,wishListId){
+            var url = "/api/user/" + userId + "/wishList/" + wishListId;
+            return $http.delete(url);
+        }
         function addWishListToFollowingList(userId,wishListId,wishList) {
             console.log("Entered the User Service");
             var url = "/api/user/"+ userId +"/wishList/" + wishListId;
