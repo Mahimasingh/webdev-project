@@ -12,6 +12,7 @@
         model.fetchAllBuyers = fetchAllBuyers;
         model.fetchAllWishLists = fetchAllWishLists;
         model.fetchDeliveryStaff = fetchDeliveryStaff;
+        model.fetchAllShoppingCarts = fetchAllShoppingCarts;
 
 
         function init() {
