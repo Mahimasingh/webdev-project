@@ -20,11 +20,11 @@ function getUserCart(req,res) {
 
 }
 
-function getAllShoppingCarts() {
+function getAllShoppingCarts(req,res) {
     shoppingCartModel
         .getCarts()
         .then(function (response) {
-            res.json(resposne);
+            res.json(response);
 
         })
 
