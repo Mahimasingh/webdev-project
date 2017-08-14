@@ -6,10 +6,18 @@
            id="name"/>
     <br>
 
-    <label for="type">Type</label>
-    <input class="form-control"
-           ng-model="model.product.type"
-           id="type"/>
+    <label>Type</label>
+    <select ng-model="model.product.type" class="form-control">
+
+    <option>CLOTHING</option>
+    <option>SHOES</option>
+    <option>BAGS</option>
+    <option>WATCHES</option>
+    <option>ACCESSORIES</option>
+    <option>JEWELLERY</option>
+    <option>SUNGLASSES</option>
+
+    </select>
     <br>
     <label for="url">URL</label>
     <input class="form-control"

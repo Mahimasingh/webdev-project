@@ -4,11 +4,10 @@
         .module("estiloApp")
         .controller("productListController", productListController);
 
-    function productListController($routeParams,productService) {
+    function productListController($routeParams,productService,orderService) {
         var model = this;
         model.productType = $routeParams['productType'];
-
-
+        model.createOrder = createOrder;
 
         function init() {
 
@@ -19,13 +18,12 @@
                         model.products = response.data;
 
                     })
-
-
-
-
-
         }
         init();
+
+        function createOrder(product,order) {
+            
+        }
 
 
 

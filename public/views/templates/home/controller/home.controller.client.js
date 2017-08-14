@@ -35,7 +35,7 @@
                                 $location.url("/profile/admin/" + user._id);
                             }
 
-                            else{
+                            else if(user.type == 'DELIVERY_STAFF'){
                                 $location.url("/profile/deliveryStaff/" + user._id);
                             }
                         }

@@ -1,1 +1,72 @@
-<h1>You are in Delivery Staff View</h1>
+<h1>Welcome Delivery Staff</h1>
+
+<div class="col-xs-8">
+    <label for="username">Username</label>
+    <input name ="username"
+           class="form-control"
+           id="username"
+           ng-model="model.user.username"
+    />
+    <br>
+
+
+
+
+
+    <label for="first name">First Name</label>
+    <input name ="first name"
+           type="text"
+           class="form-control"
+           ng-model="model.user.firstName"
+           id="first name"
+    />
+
+    <br>
+
+    <label for="last name">Last Name</label>
+    <input name ="last name"
+           type="text"
+           class="form-control"
+           ng-model="model.user.lastName"
+           id="last Name"
+    />
+    <br>
+
+
+
+
+    <label for="sex">Sex</label>
+    <input name ="Sex"
+           type="text"
+           class="form-control"
+           id="sex"
+           ng-model="model.user.sex"
+    />
+
+</div>
+<div class="col-xs-4">
+    <div class="btn btn-primary btn-block" ng-click = "model.fetchAllOrders(model.userId)" data-toggle="modal" data-target="#orderModal">Show Orders For Delivery</div>
+</div>
+
+<div class="modal fade" id="orderModal" role="dialog">
+    <div class="modal-dialog" style="word-wrap: break-word">
+        <!-- Modal content-->
+
+        <div class="modal-content container-fluid">
+            <ul class="container-fluid list-group" ng-repeat="order in model.orders">
+                <br>
+                <li class="list-group-item">
+                    {{order}}
+                </li>
+
+            </ul>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
