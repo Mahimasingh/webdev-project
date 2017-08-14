@@ -28,7 +28,16 @@
                             model.errorMessage = "User not found";
                         } else {
                             $rootScope.currenUser = user;
-                            $location.url("/profile/"+user._id);
+                            if(user.type == 'BUYER') {
+                                $location.url("/profile/" + user._id);
+                            }
+                            else if(user.type == 'ADMIN'){
+                                $location.url("/profile/admin/" + user._id);
+                            }
+
+                            else{
+                                $location.url("/profile/deliveryStaff/" + user._id);
+                            }
                         }
 
                     }

@@ -5,6 +5,7 @@ var shoppingCartModel = require("../models/shoppingCart/shoppingCart.model.serve
 
 
 app.get("/api/user/:userId/cart",getUserCart);
+app.get("/api/shoppingCarts",getAllShoppingCarts);
 
 function getUserCart(req,res) {
 
@@ -16,6 +17,16 @@ function getUserCart(req,res) {
             res.json(response);
         })
 
+
+}
+
+function getAllShoppingCarts() {
+    shoppingCartModel
+        .getCarts()
+        .then(function (response) {
+            res.json(resposne);
+
+        })
 
 }
 

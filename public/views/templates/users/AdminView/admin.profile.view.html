@@ -1,0 +1,138 @@
+<div class="container-fluid">
+
+    <h2>Welcome Admin</h2> <br>
+
+    <div class="col-xs-8">
+        <label for="username">Username</label>
+        <input name ="username"
+               class="form-control"
+               id="username"
+               ng-model="model.user.username"
+              />
+        <br>
+
+
+
+
+
+        <label for="first name">First Name</label>
+        <input name ="first name"
+               type="text"
+               class="form-control"
+               ng-model="model.user.firstName"
+               id="first name"
+               />
+
+        <br>
+
+        <label for="last name">Last Name</label>
+        <input name ="last name"
+               type="text"
+               class="form-control"
+               ng-model="model.user.lastName"
+               id="last Name"
+               />
+        <br>
+
+
+
+
+        <label for="sex">Sex</label>
+        <input name ="Sex"
+               type="text"
+               class="form-control"
+               id="sex"
+               ng-model="model.user.sex"
+               />
+
+    </div>
+    <div class="col-xs-4">
+        <div class="btn btn-primary btn-block" ng-click = "model.fetchAllBuyers()" data-toggle="modal" data-target="#buyersModal">Show All Buyers</div>
+        <div class="btn btn-primary btn-block" ng-click="model.fetchAllShoppingCarts()" data-toggle="modal" data-target="#cartModal">Show All Shopping Carts</div>
+        <div class="btn btn-primary btn-block" ng-click="model.fetchAllWishLists()" data-toggle="modal" data-target="#wishListModal">Show All WishLists</div>
+        <div class="btn btn-primary btn-block" ng-click="model.fetchDeliveryStaff()" data-toggle="modal" data-target="#sellersModal">Show Delivery Staff</div>
+        <a class="btn btn-primary btn-block" href="#!/profile/admin/{{model.userId}}/products">Show All Products</a>
+        <div class="btn btn-primary btn-block" href="#!/profile/admin/{{model.userId}}/product/new">Add a Product</div>
+
+    </div>
+
+    <div class="modal fade" id="buyersModal" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+
+            <div class="modal-content container-fluid">
+                <ul class="container-fluid list-group" ng-repeat="buyer in model.buyers">
+                    <br>
+                   <li class="list-group-item">
+                       {{buyer.username}}
+                   </li>
+
+                </ul>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" role="dialog">
+
+            <!-- Modal content-->
+
+            <div class="modal-content container-fluid">
+                <h2>{{model.shoppingCarts}}</h2>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+
+            </div>
+    </div>
+
+    <div class="modal fade" id="wishListModal" role="dialog">
+
+        <!-- Modal content-->
+
+            <div class="modal-content container-fluid">
+                <h2>{{model.wishLists}}</h2>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+
+            </div>
+    </div>
+
+    <div class="modal fade" id="sellersModal" role="dialog">
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+
+        <div class="modal-content container-fluid">
+
+
+            <ul class="container-fluid list-group" ng-repeat="person in model.delivery">
+                <br>
+                <li class="list-group-item">
+                    {{person.username}}
+                </li>
+
+            </ul>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+
+        </div>
+        </div>
+    </div>
+
+
+</div>

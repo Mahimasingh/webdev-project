@@ -3,9 +3,10 @@ var productModel = require("../models/product/product.model.server");
 
 
 
-app.get("/api/product/:pType",getAllProducts);
+app.get("/api/product/:pType",getAllProductsByType);
+app.get("/api/products",getProducts);
 
-function getAllProducts(req,res) {
+function getAllProductsByType(req,res) {
 
     prodType = req.params.pType;
     productModel
@@ -15,6 +16,16 @@ function getAllProducts(req,res) {
             res.json(response);
         })
 
+
+}
+
+function getProducts(req,res) {
+    productModel
+        .getAllProducts()
+        .then(function (response) {
+            res.json(response);
+
+        })
 
 }
 

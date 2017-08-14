@@ -4,6 +4,7 @@ var shoppingCartSchema = require("./shoppingCart.schema.server");
 var shoppingCartModel = mongoose.model("shoppingCartModel",  shoppingCartSchema);
 shoppingCartModel.getCartByUserId = getCartByUserId;
 shoppingCartModel.createShoppingCart = createShoppingCart;
+shoppingCartModel.getCarts = getCarts;
 module.exports = shoppingCartModel;
 
 function createShoppingCart(userId) {
@@ -14,5 +15,10 @@ function createShoppingCart(userId) {
 function getCartByUserId(userId) {
 
     return shoppingCartModel.find({_user : userId});
+
+}
+
+function getCarts() {
+    return shoppingCartModel.find({});
 
 }

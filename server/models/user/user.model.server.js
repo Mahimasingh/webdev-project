@@ -56,6 +56,7 @@ function updateUser(userId, user) {
 }
 
 function createUser(user) {
+    user.type = 'BUYER';
     return userModel
         .create(user)
         .then(function (user) {

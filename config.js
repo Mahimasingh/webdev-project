@@ -24,6 +24,26 @@
                 controller: "profileController",
                 controllerAs: "model"
             })
+            .when("/profile/admin/:userId",{
+                templateUrl :"public/views/templates/users/AdminView/admin.profile.view.html",
+                controller : "adminProfileController",
+                controllerAs : "model"
+            })
+            .when("/profile/admin/:userId/products",{
+                templateUrl : "public/views/templates/products/productViews/product-list-admin.view.client.html",
+                controller : "adminProductViewController",
+                controllerAs : "model"
+            })
+            .when("/profile/admin/:userId/product/new",{
+                templateUrl : "public/views/templates/products/productViews/product-new.view.client.html",
+                controller : "adminProductNewController",
+                controllerAs : "model"
+            })
+            .when("/profile/deliveryStaff/:userId",{
+                templateUrl : "public/views/templates/users/DeliveryStaffView/deliveryStaff.profile.view.html",
+                controller : "deliveryProfileController",
+                controllerAs : "model"
+            })
             .when("/user/:userId/showUsers",{
                 templateUrl : "public/views/templates/users/userViews/showUsers.view.client.html",
                 controller: "showUsersController",

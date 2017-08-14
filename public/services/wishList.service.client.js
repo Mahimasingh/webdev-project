@@ -8,13 +8,20 @@
 
 
         var api = {
-            "getWishByUserId": getWishByUserId
+            "getWishByUserId": getWishByUserId,
+            "getAllWishLists" : getAllWishLists
 
         };
         return api;
 
         function getWishByUserId(userId) {
             var url = "/api/user/" + userId + "/wishList";
+            return $http.get(url);
+
+        }
+
+        function getAllWishLists() {
+            var url = "/api/wishLists";
             return $http.get(url);
 
         }

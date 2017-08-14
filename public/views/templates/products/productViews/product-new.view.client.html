@@ -1,77 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ESTILO</title>
-    <link href ="../../../../../vendor/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <link href="../../../css/register-style.css" rel="stylesheet">
-</head>
-<body>
+<div class="container-fluid">
+
+    <label for="name">Name</label>
+    <input class="form-control"
+           ng-model="model.product.name"
+           id="name"/>
+    <br>
+
+    <label for="type">Type</label>
+    <input class="form-control"
+           ng-model="model.product.type"
+           id="type"/>
+    <br>
+    <label for="url">URL</label>
+    <input class="form-control"
+           ng-model="model.product.url"
+           id="url"/>
+    <br>
+    <label for="quantity">Quantity</label>
+    <input class="form-control"
+           type="number"
+           ng-model="model.product.quantity"
+           id="quantity"/>
+    <br>
+    <label for="price">Price per Unit</label>
+    <input class="form-control"
+           ng-model="model.product.price"
+           id="price"/>
+    <br>
+    <label for="company">Company</label>
+    <input class="form-control"
+           ng-model="model.product.company"
+           id="company"/>
+    <br>
+    <label for="reviews">Reviews</label>
+    <input class="form-control"
+           ng-model="model.product.reviews"
+           id="reviews"/>
 
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="brand-name">
-                <a class="navbar-brand" href="#">ESTILO</a></div>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+    <form action="/api/assignment/upload"   method="post" enctype="multipart/form-data">
+        <input  name="myFile"    type="file" class="form-control"/>
+        <input  name="width"     value="{{model.widget.width}}" style="display: none"/>
+        <input  name="userId"    value="{{model.userId}}"   style="display: none"/>
+        <input  name="websiteId" value="{{model.websiteId}}"   style="display: none"/>
+        <input  name="pageId"    value="{{model.pageId}}"   style="display: none"/>
+        <input  name="widgetId"  value="{{model.widget._id}}"   style="display: none"/>
+        <button type="submit"    class="btn btn-block btn-primary">Upload Image</button>
+    </form>
 
 
-                <li class="dropdown">
-                    <a
-                            class="dropdown-toggle"
-                            data-toggle="dropdown"
-                            role="button"
-                            aria-haspopup="true"
-                            aria-expanded="false">Products</a>
-
-
-                    <ul class="dropdown-menu">
-                        <li><a href="#!/product/CLOTHING">Clothing</a></li>
-                        <li><a href="#!/product/WATCHES">Watches</a></li>
-
-                        <li><a href="#!/product/BAGS">Bags</a></li>
-                        <li><a href="#!/product/SHOES">Shoes</a></li>
-
-                        <li><a href="#!/product/ACCESSORIES">Accessories</a></li>
-                        <li><a href="#!/product/JEWELLERY">Jewellery</a></li>
-                        <li><a href="#!/product/SUNGLASSES">Sunglasses</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Go!</button>
-            </form>
-
-
-
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="../../home/homeViews/contact.html">Contact Us</a></li></ul><!-- /.navbar-collapse -->
-
-        </div>
-    </div><!-- /.container-fluid -->
-</nav>
-
-
-
-
-</body>
-</html>
+</div>

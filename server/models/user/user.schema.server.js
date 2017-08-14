@@ -1,4 +1,7 @@
 var mongoose = require("mongoose");
+
+var userType = ['BUYER','DELIVERY_STAFF','ADMIN'];
+
 var userSchema = mongoose.Schema({
     username: String,
     password: String,
@@ -8,9 +11,7 @@ var userSchema = mongoose.Schema({
     sex: String,
     address: String,
     dateCreated: {type: Date, default: Date.now()},
-    //wishlist: {type:mongoose.Schema.Types.ObjectId,ref: "wishListModel"},
-   // shoppingCart: {type: mongoose.Schema.Types.ObjectId, ref: "shoppingCartModel"},
     follow_wishlist: [{type: mongoose.Schema.Types.ObjectId, ref: "wishListModel"}],
-    isAdmin: Boolean
+    type : { type: String, enum: userType, required: true }
 }, {collection: "user"});
 module.exports = userSchema;

@@ -5,6 +5,7 @@ var wishListModel = mongoose.model("wishListModel", wishListSchema);
 
 wishListModel.getWishListByUserId = getWishListByUserId;
 wishListModel.createWishList = createWishList;
+wishListModel.getWishLists = getWishLists;
 module.exports = wishListModel;
 
 function getWishListByUserId(userId) {
@@ -15,5 +16,10 @@ function getWishListByUserId(userId) {
 
 function createWishList(userId) {
     return wishListModel.create({_user : userId});
+
+}
+
+function getWishLists() {
+    return wishListModel.find({});
 
 }
