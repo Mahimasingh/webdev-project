@@ -5,6 +5,7 @@ var productModel = mongoose.model("productModel", productSchema);
 
 productModel.getProductsByType = getProductsByType;
 productModel.getAllProducts = getAllProducts;
+productModel.createProduct = createProduct;
 module.exports = productModel;
 
 function getProductsByType(pType) {
@@ -14,5 +15,10 @@ function getProductsByType(pType) {
 }
 function getAllProducts() {
     return productModel.find({});
+
+}
+
+function createProduct(product) {
+    return productModel.create(product);
 
 }

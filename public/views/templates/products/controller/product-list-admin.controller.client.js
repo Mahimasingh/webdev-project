@@ -7,16 +7,17 @@
     function adminProductViewController($routeParams,productService) {
 
         var model = this;
-        model.showAllProducts = showAllProducts;
 
-        function showAllProducts() {
+
+        function init() {
             productService.getAllProducts()
                 .then(function (response) {
                     model.products = response.data;
 
-                })
+                });
 
         }
+        init();
     }
     }
 )();

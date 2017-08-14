@@ -9,7 +9,8 @@
 
         var api = {
             "getProductByType": getProductByType,
-            "getAllProducts" : getAllProducts
+            "getAllProducts" : getAllProducts,
+            "addProductToCatalog" : addProductToCatalog
         };
         return api;
 
@@ -22,6 +23,12 @@
         function getAllProducts() {
             var url = "/api/products";
             return $http.get(url);
+
+        }
+
+        function addProductToCatalog(product) {
+            var url = "/api/product";
+            return $http.post(url,product);
 
         }
 
