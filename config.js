@@ -39,6 +39,12 @@
                 controller : "adminProductNewController",
                 controllerAs : "model"
             })
+            .when("/profile/admin/:userId/product/:productId",{
+                templateUrl : "public/views/templates/products/productViews/product-edit-admin.client.html",
+                controller : "adminProductEditController",
+                controllerAs : "model"
+            })
+
             .when("/profile/deliveryStaff/:userId",{
                 templateUrl : "public/views/templates/users/DeliveryStaffView/deliveryStaff.profile.view.html",
                 controller : "deliveryProfileController",

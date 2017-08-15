@@ -4,8 +4,16 @@
 <div class="container-fluid">
     <ul class="container-fluid list-group" ng-repeat="product in model.products">
         <br>
-        <li class="list-group-item">
+        <li class="list-group-item" style="display: inline-block">
+            <div class="col-xs-10">
             {{product}}
+            </div>
+            <div class="col-xs-1">
+                <a class="btn-block btn-primary btn" href="#!/profile/admin/{{model.userId}}/product/{{product._id}}">Edit</a>
+            </div>
+            <div class="col-xs-1">
+                <a class="btn btn-block btn-danger" ng-click="model.deleteProduct(product)">Delete</a>
+            </div>
         </li>
 
     </ul>

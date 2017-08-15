@@ -60,6 +60,11 @@
 
 
 <ul ng-repeat="product in model.products">
+
+    <div ng-show="model.message" class="alert alert-danger">
+        {{model.message}}
+    </div>
+
     <li class="list-group-item" style="display: inline-block">
         <div class="col-xs-8">
 
@@ -90,9 +95,65 @@
         <div class="col-xs-2">
 
 
-            <div ng-click="model.createOrder(product,model.order)" class="btn btn-default pull-right">Add to Cart</div>
+            <div class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal">Add to Cart</div>
 
 
+        </div>
+
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+
+                <div class="modal-content container-fluid">
+                    <h4>Please login to your account before any purchase</h4>
+                    <div ng-show="model.errorMessage" class="alert alert-danger">
+                        {{model.errorMessage}}
+                    </div>
+
+                    <br>
+                    <div class="username">
+                        <label for="username">Username</label>
+                        <input name ="username"
+                               class="form-control"
+                               ng-model="model.user.username"
+                               id="username"
+                               placeholder="alice"/>
+                    </div>
+                    <br>
+
+                    <div class="password">
+                        <label for="password">Password</label>
+                        <input name ="password"
+                               type="password"
+                               class="form-control"
+                               ng-model="model.user.password"
+                               id="password"
+                               placeholder="p#$%vd"/>
+
+                    </div>
+
+
+                    <br>
+
+
+                    <button type="button"
+                            class="btn btn-default btn-block btn-primary"
+                            data-toggle="modal"
+                            ng-click="model.loginAndCreateOrder(model.user,product,model.order)"
+                            data-target="#myModal">Login</button>
+                    <br>
+
+
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+
+
+                </div>
+
+            </div>
         </div>
 
     </li>

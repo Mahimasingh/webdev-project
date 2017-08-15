@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+    <br>
+    <label for="name">Name</label>
+    <input class="form-control"
+           ng-model="model.product.name"
+           id="name"/>
+    <br>
+
+    <label>Type</label>
+    <select ng-model="model.product.type" class="form-control">
+
+        <option>CLOTHING</option>
+        <option>SHOES</option>
+        <option>BAGS</option>
+        <option>WATCHES</option>
+        <option>ACCESSORIES</option>
+        <option>JEWELLERY</option>
+        <option>SUNGLASSES</option>
+
+    </select>
+    <br>
+    <label for="url">URL</label>
+    <input class="form-control"
+           ng-model="model.product.url"
+           id="url"/>
+    <br>
+    <label for="quantity">Quantity</label>
+    <input class="form-control"
+           type="number"
+           ng-model="model.product.quantity"
+           id="quantity"/>
+    <br>
+    <label for="price">Price per Unit</label>
+    <input class="form-control"
+           ng-model="model.product.price"
+           id="price"/>
+    <br>
+    <label for="company">Company</label>
+    <input class="form-control"
+           ng-model="model.product.company"
+           id="company"/>
+    <br>
+    <label for="reviews">Reviews</label>
+    <input class="form-control"
+           ng-model="model.product.reviews"
+           id="reviews"/>
+
+
+
+    <a ng-click="model.update(model.product)"
+       class="btn btn-block btn-primary">
+        Update
+    </a>
+
+
+</div>

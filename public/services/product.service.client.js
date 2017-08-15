@@ -10,12 +10,39 @@
         var api = {
             "getProductByType": getProductByType,
             "getAllProducts" : getAllProducts,
-            "addProductToCatalog" : addProductToCatalog
+            "addProductToCatalog" : addProductToCatalog,
+            "updateProductQuantityInCatalog" : updateProductQuantityInCatalog,
+            "getProductById" : getProductById,
+            "updateProduct" : updateProduct,
+            "deleteProduct" : deleteProduct
         };
         return api;
 
+        function deleteProduct(product) {
+            var url = "/api/product/" + product._id;
+            return $http.delete(url,product);
+
+        }
+        function updateProduct(product) {
+            var url ="/api/product/" + product._id;
+            return $http.put(url,product);
+
+        }
+
+        function getProductById(productId) {
+            var url = "/api/product/" + productId;
+            return $http.get(url);
+
+        }
+
+        function updateProductQuantityInCatalog(productId,quantity) {
+            var url = "/api/product/" + productId +"/quantity"
+            return $http.put(url,quantity);
+
+
+        }
         function getProductByType(type) {
-            var url = "/api/product/" + type;
+            var url = "/api/product/type/" + type;
             return $http.get(url);
 
         }
