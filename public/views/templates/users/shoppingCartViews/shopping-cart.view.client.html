@@ -42,12 +42,6 @@
 
 
             </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Go!</button>
-            </form>
 
 
 
@@ -59,6 +53,35 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<div ng-repeat="order in model.shoppingCart._orders">
+
+    <div class="panel panel-default">
+        <div class="panel-heading"> Date Created : {{order.dateCreated | date : 'short'}}</div>
+        <div class="panel-heading"> Total Amount : {{order.amount}}</div>
+        <div class="panel-heading"> Quantity : {{order.quantity}}</div>
 
 
-<h3>{{model.shoppingCart}}</h3>
+        <div class="panel-body">
+
+            <div class="col-sm-3 col-xs-12">
+                <div class="card" style="width:100%;border: 1px;">
+                    <img class="card-img-top" width="100%" height="200px" ng-src="{{order._product.url}}" alt="Card image cap">
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <li class="list-group-item">
+                    {{order._product.name}}
+                </li>
+                <li class="list-group-item">
+                {{order._product.company}}
+                </li>
+            </div>
+
+            <div class="col-sm-6">
+                <i class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></i>
+            </div>
+    </div>
+    <br>
+</div>
+

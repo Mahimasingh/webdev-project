@@ -10,11 +10,18 @@
         var api = {
 
             "getAllOrdersByDeliveryId" : getAllOrdersByDeliveryId,
-            "createOrder" : createOrder
+            "createOrder" : createOrder,
+            "getAllOrders" : getAllOrders
 
         };
         return api;
 
+
+        function getAllOrders() {
+            var url = "/api/orders";
+            return $http.get(url);
+
+        }
 
         function getAllOrdersByDeliveryId(userId) {
             var url = "/api/orders/" + userId;

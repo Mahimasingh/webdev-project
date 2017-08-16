@@ -39,12 +39,13 @@ function getProductById(productId) {
 }
 
 function updateQuantity(productId,quantity) {
-    return productModel
-        .findById(productId)
-        .then(function(product){
-            product.quantity = quantity;
-            return product.save()
-        })
+    console.log("entered here!");
+     return productModel
+         .getProductById(productId)
+         .then(function(product){
+             product.quantity = product.quantity - quantity;
+             return product.quantity.save()
+         })
 
 }
 function getProductsByType(pType) {

@@ -67,20 +67,8 @@
                 controllerAs: "model"
 
             })
-            .when("/user/:userId/shoppingCart/:shoppingCart",{
-                templateUrl: "public/views/templates/users/shoppingCartViews/shopping-cart-edit.view.client.html",
-                controller : "shoppingCartEditController",
-                controllerAs: "model"
 
 
-            })
-            .when("/user/:userId/wishlist/:wishlist",{
-                templateUrl: "public/views/templates/users/wishListViews/wishList-edit.view.client.html",
-                controller : "wishlistEditController",
-                controllerAs: "model"
-
-
-            })
             .when("/user/:userId/likes",{
                 templateUrl: "public/views/templates/users/userViews/likes.view.client.html",
                 controller: "likesController",
@@ -91,6 +79,12 @@
                 templateUrl : "public/views/templates/products/productViews/product-list-customer.view.client.html",
                 controller: "productListController",
                 controllerAs: "model"
+        })
+
+            .when("/product/info/:productId",{
+            templateUrl : "public/views/templates/products/productViews/product-edit.view.client.html",
+            controller: "productEditController",
+            controllerAs: "model"
         })
     }
 })();

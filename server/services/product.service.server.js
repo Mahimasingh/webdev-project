@@ -8,7 +8,7 @@ app.get("/api/products",getProducts);
 app.get("/api/product/:productId",getProductById);
 app.post("/api/product",addProduct);
 app.put("/api/product/:productId",updateProduct);
-app.put("/api/product/:productId/quantity",updateQuantityForProduct);
+
 app.delete("/api/product/:productId",deleteProduct);
 
 function deleteProduct(req,res) {
@@ -46,17 +46,9 @@ function getProductById(req,res) {
 
 }
 
-function updateQuantityForProduct(req,res) {
-    var productId = req.params.productId;
-    var quantity = req.body;
-    productModel
-        .updateQuantity(productId,quantity)
-        .then(function (response) {
-            res.send(response);
 
-        })
 
-}
+
 function addProduct(req,res) {
     var product = req.body;
     productModel

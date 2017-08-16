@@ -35,9 +35,9 @@
 
         }
 
-        function updateProductQuantityInCatalog(productId,quantity) {
-            var url = "/api/product/" + productId +"/quantity"
-            return $http.put(url,quantity);
+        function updateProductQuantityInCatalog(product,quantity) {
+            var url = "/api/product/quantity/" + quantity;
+            return $http.put(url,product);
 
 
         }

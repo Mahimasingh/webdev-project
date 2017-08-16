@@ -4,7 +4,7 @@
         .module("estiloApp")
         .controller("adminProfileController",adminProfileController);
 
-    function adminProfileController($location, userService,$routeParams,shoppingCartService,wishListService,productService) {
+    function adminProfileController($location, userService,$routeParams,orderService,shoppingCartService,wishListService,productService) {
 
         var model = this;
         var userId = $routeParams["userId"];
@@ -12,7 +12,7 @@
         model.fetchAllBuyers = fetchAllBuyers;
         model.fetchAllWishLists = fetchAllWishLists;
         model.fetchDeliveryStaff = fetchDeliveryStaff;
-        model.fetchAllShoppingCarts = fetchAllShoppingCarts;
+        model.fetchAllOrders = fetchAllOrders;
 
 
         function init() {
@@ -43,10 +43,10 @@
 
         }
 
-        function fetchAllShoppingCarts() {
-            shoppingCartService.getAllCarts()
+        function fetchAllOrders() {
+            orderService.getAllOrders()
                 .then(function (response) {
-                    model.shoppingCarts = response.data;
+                    model.orders = response.data;
 
                 })
 

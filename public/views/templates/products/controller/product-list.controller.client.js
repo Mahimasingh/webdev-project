@@ -4,7 +4,7 @@
         .module("estiloApp")
         .controller("productListController", productListController);
 
-    function productListController($routeParams,userService,productService,orderService) {
+    function productListController($routeParams,userService,productService,orderService,$location) {
         var model = this;
         model.productType = $routeParams['productType'];
         model.loginAndCreateOrder = loginAndCreateOrder;
@@ -34,12 +34,9 @@
                         orderService
                             .createOrder(product._id,user.data._id,order)
                             .then(function(res){
-                                productService
-                                    .updateProductQuantityInCatalog(product._id,order.quantity)
-                                    .the(function(response){
-                                        $location.url("#!/user/"+ user._id +"/shoppingCart")
+                                $location.url("#!/user/"+ user._id +"/shoppingCart")
                                     })
-                            })
+
                     }
 
                     else

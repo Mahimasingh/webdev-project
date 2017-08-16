@@ -11,14 +11,8 @@ module.exports = shoppingCartModel;
 
 
 function addOrdertoCart(userId,orderId) {
-    return shoppingCartModel
-        .getCartByUserId(userId)
-        .then(function (cart) {
-            cart._orders.push(orderId);
-            return cart.save();
 
-        });
-
+    return shoppingCartModel.findOneAndUpdate({_user: userId}, {$push: {_orders: orderId}}, {new: true});
 }
 function createShoppingCart(userId) {
     return shoppingCartModel.create({_user : userId});
@@ -27,8 +21,12 @@ function createShoppingCart(userId) {
 
 function getCartByUserId(userId) {
 
-    return shoppingCartModel.find({_user : userId});
-
+    return shoppingCartModel
+        .findOne({_user : userId})
+        .populate({path : '_orders',
+            populate: {path : '_product'}
+        })
+        .exec();
 }
 
 function getCarts() {

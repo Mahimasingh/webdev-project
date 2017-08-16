@@ -10,7 +10,10 @@ module.exports = wishListModel;
 
 function getWishListByUserId(userId) {
 
-    return wishListModel.findOne({_user : userId});
+    return wishListModel
+        .findOne({_user : userId})
+        .populate('_product')
+        .exec();
 
 }
 

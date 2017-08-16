@@ -1,1 +1,78 @@
-<h3>{{model.wishList}}</h3>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="brand-name">
+                <a class="navbar-brand" href="#">ESTILO</a></div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a
+                            class="dropdown-toggle"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false">Products</a>
+
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#!/product/CLOTHING">Clothing</a></li>
+                        <li><a href="#!/product/WATCHES">Watches</a></li>
+
+                        <li><a href="#!/product/BAGS">Bags</a></li>
+                        <li><a href="#!/product/SHOES">Shoes</a></li>
+
+                        <li><a href="#!/product/ACCESSORIES">Accessories</a></li>
+                        <li><a href="#!/product/JEWELLERY">Jewellery</a></li>
+                        <li><a href="#!/product/SUNGLASSES">Sunglasses</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../../home/homeViews/contact.html">Contact Us</a></li></ul><!-- /.navbar-collapse -->
+
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div ng-repeat="product in model.wishList._products">
+
+    <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+
+            <div class="col-sm-3 col-xs-12">
+                <div class="card" style="width:100%;border: 1px;">
+                    <img class="card-img-top" width="100%" height="200px" ng-src="{{product.url}}" alt="Card image cap">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <li class="list-group-item">
+                    {{order._product.name}}
+                </li>
+                <li class="list-group-item">
+                    {{order._product.company}}
+                </li>
+            </div>
+
+            <div class="col-sm-6">
+                <i class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
