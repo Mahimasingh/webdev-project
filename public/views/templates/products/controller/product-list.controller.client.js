@@ -4,7 +4,7 @@
         .module("estiloApp")
         .controller("productListController", productListController);
 
-    function productListController($routeParams,userService,productService,orderService,$location) {
+    function productListController($routeParams,userService,productService,wishListService,orderService,$location) {
         var model = this;
         model.productType = $routeParams['productType'];
         model.loginAndCreateOrder = loginAndCreateOrder;
@@ -60,9 +60,9 @@
                 .findUserByUsernameAndPassword(user.username, user.password)
                 .then(function(foundUser){
                     wishListService
-                        .addProductToWishList(foundUser._id,product)
+                        .addProductToWishList(foundUser.data._id,product)
                         .then(function (response) {
-                            $location.url("/user" + foundUser._id + "/wishList")
+                            $location.url("/user/" + foundUser.data._id + "/wishList")
 
                         })
                 })

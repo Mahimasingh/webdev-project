@@ -6,7 +6,14 @@ var wishListModel = mongoose.model("wishListModel", wishListSchema);
 wishListModel.getWishListByUserId = getWishListByUserId;
 wishListModel.createWishList = createWishList;
 wishListModel.getWishLists = getWishLists;
+wishListModel.addProductToListForUser = addProductToListForUser;
 module.exports = wishListModel;
+
+function addProductToListForUser(userId,productId) {
+
+    return wishListModel.update( {_user: userId}, {$push: {_products: productId}}, {new: true});
+
+}
 
 function getWishListByUserId(userId) {
 

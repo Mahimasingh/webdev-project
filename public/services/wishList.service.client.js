@@ -9,7 +9,8 @@
 
         var api = {
             "getWishByUserId": getWishByUserId,
-            "getAllWishLists" : getAllWishLists
+            "getAllWishLists" : getAllWishLists,
+            "addProductToWishList" : addProductToWishList
 
         };
         return api;
@@ -23,6 +24,13 @@
         function getAllWishLists() {
             var url = "/api/wishLists";
             return $http.get(url);
+
+        }
+
+        function addProductToWishList(userId,product) {
+
+            var url = "/api/user/" + userId + "/wishList";
+            return $http.put(url,product);
 
         }
 
