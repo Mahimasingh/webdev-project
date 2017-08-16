@@ -54,13 +54,34 @@
         <!-- Modal content-->
 
         <div class="modal-content container-fluid">
-            <ul class="container-fluid list-group" ng-repeat="order in model.orders">
-                <br>
-                <li class="list-group-item">
-                    {{order}}
-                </li>
+            <div ng-repeat="order in model.orders">
 
-            </ul>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Date Created : {{order.dateCreated | date : 'short'}}</div>
+                    <div class="panel-body">
+
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="card" style="width:100%;border: 1px;">
+                                <img class="card-img-top" width="100%" height="200px" ng-src="{{order._product.url}}" alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <li class="list-group-item">
+                                Product Name : {{order._product.name}}
+                            </li>
+                            <li class="list-group-item">
+                                Company Name : {{order._product.company}}
+                            </li>
+                            <li class="list-group-item">
+                                Order Quanity : {{order.quantity}}
+                            </li>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

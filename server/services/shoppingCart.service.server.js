@@ -6,6 +6,19 @@ var shoppingCartModel = require("../models/shoppingCart/shoppingCart.model.serve
 
 app.get("/api/user/:userId/cart",getUserCart);
 app.get("/api/shoppingCarts",getAllShoppingCarts);
+app.put("/api/shoppingCart/:cartId",deleteOrderFromShoppingCart);
+
+function deleteOrderFromShoppingCart(req,res) {
+
+    var cartId = req.params.cartId;
+    var order = req.body;
+    shoppingCartModel
+        .deleteOrderFromCart(cartId,order._id)
+        .then(function (response) {
+            res.json(response);
+
+    })
+}
 
 function getUserCart(req,res) {
 

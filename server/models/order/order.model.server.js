@@ -26,7 +26,9 @@ function removeOrderForProduct(productId) {
 }
 
 function getOrdersByDeliveryId(userId) {
-    return orderModel.find({deliveryStaffId : userId});
+    return orderModel.find({deliveryStaffId : userId})
+        .populate('_product')
+        .exec();
 
 }
 

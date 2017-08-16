@@ -31,6 +31,7 @@
             userService.findUserByUsernameAndPassword(user.username, user.password)
                 .then(function(user){
                     if(product.quantity >= order.quantity){
+                        order.amount = product.price * order.quantity;
                         orderService
                             .createOrder(product._id,user.data._id,order)
                             .then(function(res){

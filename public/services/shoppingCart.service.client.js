@@ -9,9 +9,17 @@
 
         var api = {
             "getCartByUserId": getCartByUserId,
-            "getAllCarts" : getAllCarts
+            "getAllCarts" : getAllCarts,
+            "deleteOrder" : deleteOrder
         };
         return api;
+
+        function deleteOrder(cartId,order) {
+
+            var url = "/api/shoppingCart/" + cartId;
+            return $http.put(url,order);
+
+        }
 
         function getCartByUserId(userId) {
             var url = "/api/user/" + userId + "/cart";

@@ -52,7 +52,7 @@
         </div>
     </div><!-- /.container-fluid -->
 </nav>
-
+<h1>Your Orders in Shopping Cart</h1><br>
 <div ng-repeat="order in model.shoppingCart._orders">
 
     <div class="panel panel-default">
@@ -79,7 +79,7 @@
             </div>
 
             <div class="col-sm-6">
-                <i class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></i>
+                <a ng-click="model.deleteOrderFromCart(model.shoppingCart._id,order)" class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></a>
             </div>
     </div>
     <br>

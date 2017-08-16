@@ -6,9 +6,15 @@ shoppingCartModel.getCartByUserId = getCartByUserId;
 shoppingCartModel.createShoppingCart = createShoppingCart;
 shoppingCartModel.getCarts = getCarts;
 shoppingCartModel.addOrdertoCart = addOrdertoCart;
+shoppingCartModel.deleteOrderFromCart = deleteOrderFromCart;
 
 module.exports = shoppingCartModel;
 
+
+function deleteOrderFromCart(cartId,orderId) {
+    return shoppingCartModel.update( {_id: cartId}, { $pullAll: {_orders: [orderId] } } )
+
+}
 
 function addOrdertoCart(userId,orderId) {
 

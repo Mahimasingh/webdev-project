@@ -2,32 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5e4da70-1bc0-4685-8b8a-53859cfdd536" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/templates/products/controller/product-edit-customer.controller.client.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/templates/users/shoppingCartViews/shopping-cart-edit.view.client.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/templates/users/wishListViews/wishList-edit.view.client.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/services/order.service.client.js" afterPath="$PROJECT_DIR$/public/services/order.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/services/product.service.client.js" afterPath="$PROJECT_DIR$/public/services/product.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/products/controller/product-list-admin.controller.client.js" afterPath="$PROJECT_DIR$/public/views/templates/products/controller/product-list-admin.controller.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/services/shoppingCart.service.client.js" afterPath="$PROJECT_DIR$/public/services/shoppingCart.service.client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/products/controller/product-list.controller.client.js" afterPath="$PROJECT_DIR$/public/views/templates/products/controller/product-list.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/products/productViews/product-edit.view.client.html" afterPath="$PROJECT_DIR$/public/views/templates/products/productViews/product-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/products/productViews/product-list-admin.view.client.html" afterPath="$PROJECT_DIR$/public/views/templates/products/productViews/product-list-admin.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/products/productViews/product-list-customer.view.client.html" afterPath="$PROJECT_DIR$/public/views/templates/products/productViews/product-list-customer.view.client.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/users/AdminView/admin.profile.view.html" afterPath="$PROJECT_DIR$/public/views/templates/users/AdminView/admin.profile.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/users/controllers/adminProfile.controller.client.js" afterPath="$PROJECT_DIR$/public/views/templates/users/controllers/adminProfile.controller.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/users/DeliveryStaffView/deliveryStaff.profile.view.html" afterPath="$PROJECT_DIR$/public/views/templates/users/DeliveryStaffView/deliveryStaff.profile.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/users/controllers/shoppingCart.controller.client.js" afterPath="$PROJECT_DIR$/public/views/templates/users/controllers/shoppingCart.controller.client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/users/shoppingCartViews/shopping-cart.view.client.html" afterPath="$PROJECT_DIR$/public/views/templates/users/shoppingCartViews/shopping-cart.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/users/wishListViews/wishList-list.view.client.html" afterPath="$PROJECT_DIR$/public/views/templates/users/wishListViews/wishList-list.view.client.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/order/order.model.server.js" afterPath="$PROJECT_DIR$/server/models/order/order.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/order/order.schema.server.js" afterPath="$PROJECT_DIR$/server/models/order/order.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/product/product.model.server.js" afterPath="$PROJECT_DIR$/server/models/product/product.model.server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/shoppingCart/shoppingCart.model.server.js" afterPath="$PROJECT_DIR$/server/models/shoppingCart/shoppingCart.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/shoppingCart/shoppingCart.schema.server.js" afterPath="$PROJECT_DIR$/server/models/shoppingCart/shoppingCart.schema.server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/wishList/wishList.model.server.js" afterPath="$PROJECT_DIR$/server/models/wishList/wishList.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/wishList/wishList.schema.server.js" afterPath="$PROJECT_DIR$/server/models/wishList/wishList.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/order.service.server.js" afterPath="$PROJECT_DIR$/server/services/order.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/product.service.server.js" afterPath="$PROJECT_DIR$/server/services/product.service.server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/shoppingCart.service.server.js" afterPath="$PROJECT_DIR$/server/services/shoppingCart.service.server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,14 +26,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.profile.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/templates/users/AdminView/admin.profile.view.html">
+      <file leaf-file-name="shopping-cart.view.client.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/views/templates/users/shoppingCartViews/shopping-cart.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="293">
+              <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shoppingCart.controller.client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/templates/users/controllers/shoppingCart.controller.client.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,18 +51,18 @@
       <file leaf-file-name="shoppingCart.service.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/services/shoppingCart.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="255">
+              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shoppingCart.model.server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shoppingCart.model.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/models/shoppingCart/shoppingCart.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+            <state relative-caret-position="115">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,7 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/views/templates/users/controllers/showOnlineUsers.controller.client.js" />
         <option value="$PROJECT_DIR$/server/services/user.service.server.js" />
         <option value="$PROJECT_DIR$/public/services/user.service.client.js" />
         <option value="$PROJECT_DIR$/public/views/templates/users/controllers/likes.controller.client.js" />
@@ -100,7 +93,6 @@
         <option value="$PROJECT_DIR$/public/views/templates/users/Admin View/admin.profile.view.html" />
         <option value="$PROJECT_DIR$/public/views/templates/users/Delivery Staff View/deliveryStaff.profile.view.html" />
         <option value="$PROJECT_DIR$/public/views/templates/users/controllers/adminView.controller.client.js" />
-        <option value="$PROJECT_DIR$/public/services/shoppingCart.service.client.js" />
         <option value="$PROJECT_DIR$/public/services/wishList.service.client.js" />
         <option value="$PROJECT_DIR$/server/services/wishList.service.server.js" />
         <option value="$PROJECT_DIR$/public/views/templates/products/controller/product-add-admin.controller.client.js" />
@@ -110,8 +102,6 @@
         <option value="$PROJECT_DIR$/public/views/templates/products/productViews/product-new.view.client.html" />
         <option value="$PROJECT_DIR$/public/views/templates/users/userViews/likes.view.client.html" />
         <option value="$PROJECT_DIR$/public/views/templates/users/userViews/profile.view.client.html" />
-        <option value="$PROJECT_DIR$/public/views/templates/users/DeliveryStaffView/deliveryStaff.profile.view.html" />
-        <option value="$PROJECT_DIR$/server/services/shoppingCart.service.server.js" />
         <option value="$PROJECT_DIR$/public/views/templates/products/productViews/product-information.view.client.html" />
         <option value="$PROJECT_DIR$/public/views/templates/products/productViews/product-edit-admin.client.html" />
         <option value="$PROJECT_DIR$/public/views/templates/products/controller/product-edit-admin.controller.client.js" />
@@ -120,7 +110,6 @@
         <option value="$PROJECT_DIR$/public/views/templates/home/homeViews/home.view.client.html" />
         <option value="$PROJECT_DIR$/server/models/shoppingCart/shoppingCart.schema.server.js" />
         <option value="$PROJECT_DIR$/public/services/product.service.client.js" />
-        <option value="$PROJECT_DIR$/public/views/templates/products/controller/product-list.controller.client.js" />
         <option value="$PROJECT_DIR$/server/services/product.service.server.js" />
         <option value="$PROJECT_DIR$/server/models/product/product.model.server.js" />
         <option value="$PROJECT_DIR$/public/views/templates/products/productViews/product-list-customer.view.client.html" />
@@ -130,17 +119,22 @@
         <option value="$PROJECT_DIR$/public/views/templates/products/productViews/product-list-admin.view.client.html" />
         <option value="$PROJECT_DIR$/server/models/order/order.schema.server.js" />
         <option value="$PROJECT_DIR$/config.js" />
-        <option value="$PROJECT_DIR$/public/views/templates/users/shoppingCartViews/shopping-cart.view.client.html" />
         <option value="$PROJECT_DIR$/server/models/wishList/wishList.schema.server.js" />
         <option value="$PROJECT_DIR$/public/views/templates/users/wishListViews/wishList-list.view.client.html" />
         <option value="$PROJECT_DIR$/public/views/templates/products/productViews/product-edit.view.client.html" />
         <option value="$PROJECT_DIR$/public/views/templates/users/controllers/adminProfile.controller.client.js" />
         <option value="$PROJECT_DIR$/public/services/order.service.client.js" />
         <option value="$PROJECT_DIR$/server/services/order.service.server.js" />
-        <option value="$PROJECT_DIR$/server/models/wishList/wishList.model.server.js" />
         <option value="$PROJECT_DIR$/public/views/templates/users/AdminView/admin.profile.view.html" />
+        <option value="$PROJECT_DIR$/server/models/wishList/wishList.model.server.js" />
+        <option value="$PROJECT_DIR$/public/views/templates/users/DeliveryStaffView/deliveryStaff.profile.view.html" />
         <option value="$PROJECT_DIR$/server/models/order/order.model.server.js" />
+        <option value="$PROJECT_DIR$/public/views/templates/products/controller/product-list.controller.client.js" />
+        <option value="$PROJECT_DIR$/public/services/shoppingCart.service.client.js" />
+        <option value="$PROJECT_DIR$/server/services/shoppingCart.service.server.js" />
         <option value="$PROJECT_DIR$/server/models/shoppingCart/shoppingCart.model.server.js" />
+        <option value="$PROJECT_DIR$/public/views/templates/users/controllers/shoppingCart.controller.client.js" />
+        <option value="$PROJECT_DIR$/public/views/templates/users/shoppingCartViews/shopping-cart.view.client.html" />
       </list>
     </option>
   </component>
@@ -821,12 +815,12 @@
       <option name="presentableId" value="Default" />
       <updated>1502389268989</updated>
       <workItem from="1502389270472" duration="60493000" />
-      <workItem from="1502726115102" duration="56151000" />
+      <workItem from="1502726115102" duration="59686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165186000" />
+    <option name="totallyTimeSpent" value="168721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -836,7 +830,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10797342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20598006" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -929,24 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="166" column="10" lean-forward="false" selection-start-line="166" selection-start-column="10" selection-end-line="166" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/templates/users/DeliveryStaffView/deliveryStaff.profile.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/services/shoppingCart.service.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1079,22 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/templates/products/controller/product-list.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/product/product.schema.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/templates/products/controller/product-edit-admin.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1170,14 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/templates/users/controllers/shoppingCart.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/templates/users/wishListViews/wishList-edit.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1239,14 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/templates/users/controllers/adminProfile.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-281">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/services/order.service.client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1263,13 +1207,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/templates/users/shoppingCartViews/shopping-cart.view.client.html">
+    <entry file="file://$PROJECT_DIR$/public/views/templates/users/wishListViews/wishList-list.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="58" column="87" lean-forward="false" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="87" />
+        <state relative-caret-position="442">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/wishList/wishList.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/templates/users/controllers/adminProfile.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/order/order.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/templates/users/DeliveryStaffView/deliveryStaff.profile.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="75" column="48" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/templates/users/AdminView/admin.profile.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="111" column="0" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="111" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/product/product.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,55 +1278,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/wishList/wishList.model.server.js">
+    <entry file="file://$PROJECT_DIR$/public/views/templates/products/controller/product-list.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="183">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/templates/users/wishListViews/wishList-list.view.client.html">
+    <entry file="file://$PROJECT_DIR$/public/services/shoppingCart.service.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="61" column="18" lean-forward="true" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/order/order.model.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        <state relative-caret-position="302">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/templates/users/AdminView/admin.profile.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/services/shoppingCart.service.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/models/shoppingCart/shoppingCart.model.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        <state relative-caret-position="115">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/templates/users/controllers/shoppingCart.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/templates/users/shoppingCartViews/shopping-cart.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

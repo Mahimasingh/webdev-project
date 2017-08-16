@@ -125,7 +125,35 @@
         <!-- Modal content-->
 
             <div class="modal-content container-fluid">
-                <h2>{{model.wishLists}}</h2>
+
+                <div ng-repeat="wishList in model.wishLists">
+
+                    <div ng-repeat="product in wishList._products">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading"></div>
+                        <div class="panel-body">
+
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="card" style="width:100%;border: 1px;">
+                                    <img class="card-img-top" width="100%" height="200px" ng-src="{{product.url}}" alt="Card image cap">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <li class="list-group-item">
+                                    {{product.name}}
+                                </li>
+                                <li class="list-group-item">
+                                    {{product.company}}
+                                </li>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
