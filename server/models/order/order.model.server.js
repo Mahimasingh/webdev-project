@@ -1,9 +1,10 @@
 var mongoose = require("mongoose");
 var orderSchema = require("./order.schema.server");
+var orderModel = mongoose.model("orderModel", orderSchema);
 var shoppingCartModel = require("../shoppingCart/shoppingCart.model.server");
 var productModel = require("../product/product.model.server");
 
-var orderModel = mongoose.model("orderModel", orderSchema);
+
 orderModel.getOrdersByDeliveryId = getOrdersByDeliveryId;
 orderModel.createOrder = createOrder;
 orderModel.removeOrderForProduct = removeOrderForProduct;
@@ -43,14 +44,14 @@ function createOrder(userId,productId,order) {
 
               return shoppingCartModel.addOrdertoCart(userId,createdOrder._id);
 
-          })
+          }, function (err) {
+             console.log(err);
+         })
           .then(function (response) {
-              productModel.updateQuantity(productId, order.quantity)
-                  .then(function (res) {
+              return productModel.updateQuantity(productId, order.quantity);
 
-                  console.log(res);
 
-              });
-
+          }, function (err) {
+              console.log(err);
           });
  }

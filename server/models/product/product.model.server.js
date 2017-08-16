@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 var productSchema = require("./product.schema.server");
 
 var productModel = mongoose.model("productModel", productSchema);
-var orderModel = require("../order/order.model.server");
+// var orderModel = require("../order/order.model.server");
 var wishListModel = require("../wishList/wishList.model.server");
 
 productModel.getProductsByType = getProductsByType;
@@ -16,13 +16,13 @@ module.exports = productModel;
 
 function deleteProduct(productId,product) {
     return productModel
-        .remove({_id : productId})
-        .then(function (response) {
-            return orderModel
-                .removeOrderForProduct(productId)
-
-
-        })
+         .remove({_id : productId});
+    //     .then(function (response) {
+    //         return orderModel
+    //             .removeOrderForProduct(productId)
+    //
+    //
+    //     })
 
 }
 function updateProduct(productId,product) {
@@ -44,8 +44,10 @@ function updateQuantity(productId,quantity) {
          .getProductById(productId)
          .then(function(product){
              product.quantity = product.quantity - quantity;
-             return product.quantity.save()
-         })
+             return product.save()
+         }, function (err) {
+             console.log(err);
+         });
 
 }
 function getProductsByType(pType) {
