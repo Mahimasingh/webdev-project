@@ -57,15 +57,20 @@ function updateUser(userId, user) {
 
 function createUser(user) {
     user.type = 'BUYER';
+    var _user = null;
     return userModel
         .create(user)
         .then(function (user) {
+            _user = user;
             return wishListModel
                    .createWishList(user._id);
         })
         .then(function (createdWishList) {
             return shoppingCartModel
                 .createShoppingCart(createdWishList._user);
+        })
+        .then(function () {
+            return _user;
         });
 }
 

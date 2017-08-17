@@ -137,9 +137,9 @@ function registerUser(req,response) {
     userModel
         .createUser(user)
         .then(function (user) {
-            req
-                .login(user, function (status) {
-                    res.send(status);
+            var _user = user;
+            req.login(user, function (status) {
+                    response.send(_user);
                 })
         });
 
