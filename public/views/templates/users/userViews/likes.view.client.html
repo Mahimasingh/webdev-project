@@ -54,7 +54,7 @@
         </div>
     </div><!-- /.container-fluid -->
 </nav>
-
+<h1 class="container-fluid" style="color: maroon; font-family: Papyrus">You are Following below Users</h1><br>
 <div class="modal-content container-fluid">
 
     <div ng-repeat="wishList in model.following">
@@ -77,6 +77,12 @@
                         <li class="list-group-item">
                             {{product.company}}
                         </li>
+                    </div>
+                    <div class="col-sm-6">
+                        <a class="btn btn-default" ng-click="model.removeWishListFromFollowing(wishList._id)">
+                            Unfollow <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+
                     </div>
 
 
