@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="brand-name">
-                <a class="navbar-brand" href="#">ESTILO</a></div>
+                <img class="navbar-brand" style="height: 100px; padding: 15px" src = "../../../../../images/estilo.jpg" href="#"></img></div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,7 +23,7 @@
                             data-toggle="dropdown"
                             role="button"
                             aria-haspopup="true"
-                            aria-expanded="false">Products</a>
+                            aria-expanded="false"><h3 style="color : maroon">Products</h3></a>
 
 
                     <ul class="dropdown-menu">
@@ -39,6 +39,10 @@
                     </ul>
                 </li>
 
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="contact.html"><h3 style="color : maroon">Contact Us</h3></a></li></ul>
+
+
 
             </ul>
 
@@ -46,8 +50,6 @@
 
 
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="../../home/homeViews/contact.html">Contact Us</a></li></ul><!-- /.navbar-collapse -->
 
         </div>
     </div><!-- /.container-fluid -->
@@ -90,7 +92,7 @@
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content container-fluid">
-                        <h4>Please login to your account before any purchase</h4>
+                        <h3 style="font-family: Papyrus; color: maroon">Please login to your account before any purchase</h3>
                         <div ng-show="model.errorMessage" class="alert alert-danger">
                             {{model.errorMessage}}
                         </div>
@@ -101,6 +103,7 @@
                             <input name ="username"
                                    class="form-control"
                                    ng-model="model.user.username"
+                                   style="font-family: Papyrus; color: maroon"
                                    id="username"
                                    placeholder="alice"/>
                         </div>
@@ -112,6 +115,7 @@
                                    type="password"
                                    class="form-control"
                                    ng-model="model.user.password"
+                                   style="font-family: Papyrus; color: maroon; text-align: left"
                                    id="password"
                                    placeholder="p#$%vd"/>
 
@@ -148,7 +152,8 @@
             <div class="modal fade" id="wishListModal" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content container-fluid">
-                        <h4>Please login to your account before any purchase</h4>
+                        <br>
+                        <h3 style="font-family: Papyrus; color: maroon">Please login to your account to add to WishList</h3>
                         <div ng-show="model.errorMessage" class="alert alert-danger">
                             {{model.errorMessage}}
                         </div>
@@ -160,16 +165,18 @@
                                    class="form-control"
                                    ng-model="model.user.username"
                                    id="user"
+                                   style="font-family: Papyrus; color: maroon"
                                    placeholder="alice"/>
                         </div>
                         <br>
 
                         <div class="password">
-                            <label for="password">Password</label>
+                            <label style=".text-center {text-align: left}" for="password">Password</label>
                             <input name ="password"
                                    type="password"
                                    class="form-control"
                                    ng-model="model.user.password"
+                                   style="font-family: Papyrus; color: maroon; text-align: left"
                                    id="pass"
                                    placeholder="p#$%vd"/>
 
@@ -183,6 +190,7 @@
                                 class="btn btn-default btn-block btn-primary"
                                 data-toggle="modal"
                                 ng-click="model.loginAndAddToWishList(model.user,product)"
+
                                 data-target="#wishListModal">Login</button>
                         <br>
 

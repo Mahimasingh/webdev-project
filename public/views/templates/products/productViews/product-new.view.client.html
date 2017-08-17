@@ -1,12 +1,71 @@
-<div class="container-fluid">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="brand-name">
+                <img class="navbar-brand" style="height: 100px; padding: 15px" src = "../../../../../images/estilo.jpg" href="#"></img></div>
+        </div>
 
-    <label for="name">Name</label>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                <li class="dropdown">
+                    <a
+                            class="dropdown-toggle"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false"><h3 style="color : maroon">Products</h3></a>
+
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#!/product/CLOTHING">Clothing</a></li>
+                        <li><a href="#!/product/WATCHES">Watches</a></li>
+
+                        <li><a href="#!/product/BAGS">Bags</a></li>
+                        <li><a href="#!/product/SHOES">Shoes</a></li>
+
+                        <li><a href="#!/product/ACCESSORIES">Accessories</a></li>
+                        <li><a href="#!/product/JEWELLERY">Jewellery</a></li>
+                        <li><a href="#!/product/SUNGLASSES">Sunglasses</a></li>
+                    </ul>
+                </li>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="contact.html"><h3 style="color : maroon">Contact Us</h3></a></li></ul>
+
+
+
+            </ul>
+
+
+
+
+
+
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="container-fluid">
+    <h2  style="color: maroon; font-family: Papyrus">What's new in Catalog?</h2> <br>
+
+    <label style="color: maroon" for="name">Name</label>
     <input class="form-control"
            ng-model="model.product.name"
            id="name"/>
     <br>
 
-    <label>Type</label>
+    <label style="color: maroon">Type</label>
     <select ng-model="model.product.type" class="form-control">
 
     <option>CLOTHING</option>
@@ -19,37 +78,37 @@
 
     </select>
     <br>
-    <label for="url">URL</label>
+    <label style="color: maroon" for="url">URL</label>
     <input class="form-control"
            ng-model="model.product.url"
            id="url"/>
     <br>
-    <label for="quantity">Quantity</label>
+    <label style="color: maroon" for="quantity">Quantity</label>
     <input class="form-control"
            type="number"
            ng-model="model.product.quantity"
            id="quantity"/>
     <br>
-    <label for="price">Price per Unit</label>
+    <label style="color: maroon" for="price">Price per Unit</label>
     <input class="form-control"
            ng-model="model.product.price"
            id="price"/>
     <br>
-    <label for="company">Company</label>
+    <label style="color: maroon" for="company">Company</label>
     <input class="form-control"
            ng-model="model.product.company"
            id="company"/>
     <br>
-    <label for="reviews">Reviews</label>
+    <label style="color: maroon" for="reviews">Reviews</label>
     <input class="form-control"
            ng-model="model.product.reviews"
            id="reviews"/>
-
-
+    <br>
 
     <a ng-click="model.addProduct(model.product)"
-       class="btn btn-block btn-primary">
-        Add the product
+       style="background-color: maroon; color: white"
+       class="btn btn-block">
+        Add product
     </a>
 
 

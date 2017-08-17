@@ -1,7 +1,65 @@
-<h1>Welcome Delivery Staff</h1>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="brand-name">
+                <img class="navbar-brand" style="height: 100px; padding: 15px" src = "../../../../../images/estilo.jpg" href="#"></img></div>
+        </div>
 
-<div class="col-xs-8">
-    <label for="username">Username</label>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                <li class="dropdown">
+                    <a
+                            class="dropdown-toggle"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false"><h3 style="color : maroon">Products</h3></a>
+
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#!/product/CLOTHING">Clothing</a></li>
+                        <li><a href="#!/product/WATCHES">Watches</a></li>
+
+                        <li><a href="#!/product/BAGS">Bags</a></li>
+                        <li><a href="#!/product/SHOES">Shoes</a></li>
+
+                        <li><a href="#!/product/ACCESSORIES">Accessories</a></li>
+                        <li><a href="#!/product/JEWELLERY">Jewellery</a></li>
+                        <li><a href="#!/product/SUNGLASSES">Sunglasses</a></li>
+                    </ul>
+                </li>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="contact.html"><h3 style="color : maroon">Contact Us</h3></a></li></ul>
+
+
+
+            </ul>
+
+
+
+
+
+
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<h2 class="container-fluid" style="font-family: Papyrus; color: maroon">Welcome Delivery Staff</h2><br>
+
+<div class="col-sm-8">
+    <label style="color: maroon" for="username">Username</label>
     <input name ="username"
            class="form-control"
            id="username"
@@ -13,7 +71,7 @@
 
 
 
-    <label for="first name">First Name</label>
+    <label style="color: maroon" for="first name">First Name</label>
     <input name ="first name"
            type="text"
            class="form-control"
@@ -23,7 +81,7 @@
 
     <br>
 
-    <label for="last name">Last Name</label>
+    <label style="color: maroon" for="last name">Last Name</label>
     <input name ="last name"
            type="text"
            class="form-control"
@@ -35,7 +93,7 @@
 
 
 
-    <label for="sex">Sex</label>
+    <label style="color: maroon" for="sex">Sex</label>
     <input name ="Sex"
            type="text"
            class="form-control"
@@ -44,7 +102,7 @@
     />
 
 </div>
-<div class="col-xs-4">
+<div class="col-sm-4">
     <div class="btn btn-primary btn-block" ng-click = "model.fetchAllOrders(model.userId)" data-toggle="modal" data-target="#orderModal">Show Orders For Delivery</div>
     <a class="btn btn-danger btn-block" href="#!/">Logout</a>
 </div>

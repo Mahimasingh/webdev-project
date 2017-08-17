@@ -22,7 +22,7 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="brand-name">
-                <a class="navbar-brand" href="#">ESTILO</a></div>
+                <img class="navbar-brand" style="height: 100px; padding: 15px" src = "../../../../../images/estilo.jpg" href="#"></img></div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -36,7 +36,7 @@
                             data-toggle="dropdown"
                             role="button"
                             aria-haspopup="true"
-                            aria-expanded="false">Products</a>
+                            aria-expanded="false"><h3 style="color : maroon">Products</h3></a>
 
 
                     <ul class="dropdown-menu">
@@ -52,22 +52,20 @@
                     </ul>
                 </li>
 
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="contact.html"><h3 style="color : maroon">Contact Us</h3></a></li></ul>
 
 
 
             </ul>
 
-
-            <form class="navbar-form navbar-left">
-                <a  class="btn btn-default" href = "#!/user/{{model.user._id}}/showUsers">Online Users</a>
-
-            </form>
-
-
-
-
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../../home/homeViews/contact.html">Contact Us</a></li></ul><!-- /.navbar-collapse -->
+                <br>
+                <div class="login-button">
+                    <a type="button" class="btn btn-block pull-right" href = "#!/user/{{model.user._id}}/showUsers" style="background-color : maroon; color : white">Show Online Users</a>
+                </div>
+            </ul>
+
 
         </div>
     </div><!-- /.container-fluid -->
