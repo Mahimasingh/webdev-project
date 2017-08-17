@@ -102,6 +102,9 @@
 
     </div>
     <div class="col-xs-4">
+        <div class="card" ng-show="model.user.url" style="width:100%;border: 5px solid;">
+            <img class="card-img-top" width="100%" height="200px" src= "model.user.url" alt="Card image cap">
+        </div>
         <div class="btn btn-primary btn-block" ng-click = "model.fetchAllBuyers()" data-toggle="modal" data-target="#buyersModal">Show All Buyers</div>
         <div class="btn btn-primary btn-block" ng-click="model.fetchAllOrders()" data-toggle="modal" data-target="#orderModal">Show All Orders</div>
         <div class="btn btn-primary btn-block" ng-click="model.fetchAllWishLists()" data-toggle="modal" data-target="#wishListModal">Show All WishLists</div>
