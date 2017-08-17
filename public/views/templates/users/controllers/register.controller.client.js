@@ -25,7 +25,7 @@
                 })
                 .then(function (response) {
                     var varUser = response.data; //here you are getting back shoppingCart
-                    $location.url("/profile/" + varUser._user);
+                    $location.url("/profile");
                 });
         }
     }

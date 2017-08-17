@@ -4,9 +4,9 @@
         .module("estiloApp")
         .controller("profileController", profileController);
 
-    function profileController($routeParams, userService,$location) {
+    function profileController($routeParams, userService,$location,user) {
         var model = this;
-        var userId = $routeParams["userId"];
+        var userId = user._id;
 
 
         model.updateUser = updateUser;

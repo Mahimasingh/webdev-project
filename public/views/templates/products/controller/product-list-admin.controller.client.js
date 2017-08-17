@@ -25,7 +25,7 @@
             return productService
                 .deleteProduct(product)
                 .then(function (response) {
-                    $location.url("/profile/admin/" + model.userId );
+                    $location.url("/profile/admin" );
 
                 })
 

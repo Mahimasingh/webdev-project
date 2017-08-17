@@ -9,18 +9,28 @@
 
         var api = {
             "findUserByUsername": findUserByUsername,
-            "findUserByUsernameAndPassword": findUserByUsernameAndPassword,
+            "login": login,
             "findUserById": findUserById,
             "registerUser": registerUser,
             "updateUser": updateUser,
             "deleteUser" : deleteUser,
             "getAllUsers" : getAllUsers,
             "addWishListToFollowingList" : addWishListToFollowingList,
-            "removeWishListFromArray" : removeWishListFromArray
+            "removeWishListFromArray" : removeWishListFromArray,
+            "checkLogin" : checkLogin
 
         };
         return api;
 
+        function checkLogin(){
+            return $http
+                .get("/api/checkLogin")
+                .then(function (response) {
+                    return response.data;
+                    
+                })
+                    
+        }
         function removeWishListFromArray(userId,wishListId){
             var url = "/api/user/" + userId + "/wishList/" + wishListId;
             return $http.delete(url);
@@ -59,10 +69,10 @@
             return $http.get("/api/user/" + userId)
         }
 
-        function findUserByUsernameAndPassword(username, password) {
+        function login(username, password) {
 
-            var url = "/api/user?username=" + username + "&password=" + password;
-            return $http.get(url);
+            var url = "/api/login";
+            return $http.post(url,{username : username, password : password});
 
         }
 

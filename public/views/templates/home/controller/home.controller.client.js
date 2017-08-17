@@ -19,7 +19,7 @@
                 model.errorMessage = "User not found";
                 return;
             }
-            var promise = userService.findUserByUsernameAndPassword(user.username, user.password);
+            var promise = userService.login(user.username, user.password);
             promise
                 .then(function (response){
 
@@ -29,14 +29,14 @@
                         } else {
                             $rootScope.currenUser = user;
                             if(user.type == 'BUYER') {
-                                $location.url("/profile/" + user._id);
+                                $location.url("/profile");
                             }
                             else if(user.type == 'ADMIN'){
-                                $location.url("/profile/admin/" + user._id);
+                                $location.url("/profile/admin");
                             }
 
                             else if(user.type == 'DELIVERY_STAFF'){
-                                $location.url("/profile/deliveryStaff/" + user._id);
+                                $location.url("/profile/deliveryStaff/");
                             }
                         }
 

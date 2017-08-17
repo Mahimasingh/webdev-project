@@ -29,7 +29,7 @@
                 return;
             }
 
-            userService.findUserByUsernameAndPassword(user.username, user.password)
+            userService.login(user.username, user.password)
                 .then(function(foundUser){
                     if(product.quantity >= order.quantity){
                         order.amount = product.price * order.quantity;
@@ -57,7 +57,7 @@
             }
 
             userService
-                .findUserByUsernameAndPassword(user.username, user.password)
+                .login(user.username, user.password)
                 .then(function(foundUser){
                     wishListService
                         .addProductToWishList(foundUser.data._id,product)

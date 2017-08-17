@@ -27,7 +27,7 @@
                 .deleteOrder(cartId,order)
                 .then(function (response) {
 
-                    $location.url("/profile/" + userId);
+                    $location.url("/profile");
 
             })
 

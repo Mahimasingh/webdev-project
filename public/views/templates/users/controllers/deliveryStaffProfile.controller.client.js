@@ -4,10 +4,10 @@
         .module("estiloApp")
         .controller("deliveryProfileController",deliveryProfileController);
 
-    function deliveryProfileController($location, orderService,$routeParams,userService) {
+    function deliveryProfileController($location, orderService,$routeParams,userService,user) {
 
         var model = this;
-        var userId = $routeParams["userId"];
+        var userId = user._id;
         model.userId = userId;
         model.fetchAllOrders = fetchAllOrders;
 

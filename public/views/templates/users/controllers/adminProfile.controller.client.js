@@ -4,10 +4,10 @@
         .module("estiloApp")
         .controller("adminProfileController",adminProfileController);
 
-    function adminProfileController($location, userService,$routeParams,orderService,shoppingCartService,wishListService,productService) {
+    function adminProfileController($location, userService,$routeParams,orderService,shoppingCartService,wishListService,productService,user) {
 
         var model = this;
-        var userId = $routeParams["userId"];
+        var userId = user._id;
         model.userId = userId;
         model.fetchAllBuyers = fetchAllBuyers;
         model.fetchAllWishLists = fetchAllWishLists;
