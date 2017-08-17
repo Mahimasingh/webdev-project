@@ -7,6 +7,7 @@ wishListModel.getWishListByUserId = getWishListByUserId;
 wishListModel.createWishList = createWishList;
 wishListModel.getWishLists = getWishLists;
 wishListModel.addProductToListForUser = addProductToListForUser;
+wishListModel.deleteProductForUser = deleteProductForUser;
 module.exports = wishListModel;
 
 function addProductToListForUser(userId,productId) {
@@ -15,11 +16,17 @@ function addProductToListForUser(userId,productId) {
 
 }
 
+function deleteProductForUser(userId,productId) {
+
+    return wishListModel.update( {_user: userId}, { $pullAll: {_products: [productId] } } )
+
+}
+
 function getWishListByUserId(userId) {
 
     return wishListModel
         .findOne({_user : userId})
-        .populate('_product')
+        .populate('_products')
         .exec();
 
 }

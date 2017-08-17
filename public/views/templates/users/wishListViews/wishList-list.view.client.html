@@ -62,15 +62,15 @@
             </div>
             <div class="col-sm-3">
                 <li class="list-group-item">
-                    {{order._product.name}}
+                    Product Name : {{product.name}}
                 </li>
                 <li class="list-group-item">
-                    {{order._product.company}}
+                    Product Company : {{product.company}}
                 </li>
             </div>
 
             <div class="col-sm-6">
-                <i class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></i>
+                <a ng-click = "model.removeProductFromList(product)" class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></a>
             </div>
         </div>
     </div>

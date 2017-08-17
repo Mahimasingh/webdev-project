@@ -1,32 +1,35 @@
 
-<!--<h3>{{model.following}}</h3>-->
+<div class="modal-content container-fluid">
 
-<div class="container-fluid">
+    <div ng-repeat="wishList in model.following">
 
-    <div ng-show="model.message" class="alert alert-danger">
-        {{model.message}}
+        <div ng-repeat="product in wishList._products">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">{{wishList._user.firstName}}</div>
+                <div class="panel-body">
+
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="card" style="width:100%;border: 1px;">
+                            <img class="card-img-top" width="100%" height="200px" ng-src="{{product.url}}" alt="Card image cap">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <li class="list-group-item">
+                            {{product.name}}
+                        </li>
+                        <li class="list-group-item">
+                            {{product.company}}
+                        </li>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
     </div>
 
-    <h2>You are following the below Wishlists</h2>
 
-
-    <ul ng-repeat="wishListId in model.following">
-        <li>
-            <h3>
-               {{wishListId._user.firstName}}
-                <div ng-click="model.removeWishListFromFollowing(wishListId._id)" class="btn btn-default btn-danger pull-right">
-                    Unfollow</div>
-            </h3>
-
-            <h5>Having below products : </h5>
-            <ul ng-repeat="product in wishListId._products">
-                <l1>
-                    <h6>{{product}}</h6>
-                </l1>
-            </ul>
-        </li>
-
-    </ul>
 
 
 </div>

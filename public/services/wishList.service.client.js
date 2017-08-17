@@ -10,10 +10,18 @@
         var api = {
             "getWishByUserId": getWishByUserId,
             "getAllWishLists" : getAllWishLists,
-            "addProductToWishList" : addProductToWishList
+            "addProductToWishList" : addProductToWishList,
+            "removeProduct" : removeProduct
 
         };
         return api;
+
+        function removeProduct(userId,product) {
+            console.log("I came here!!")
+            var url = "/api/user/" + userId + "/wishList/delete";
+            return $http.put(url,product);
+
+        }
 
         function getWishByUserId(userId) {
             var url = "/api/user/" + userId + "/wishList";
