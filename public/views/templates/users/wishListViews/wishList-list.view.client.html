@@ -49,6 +49,13 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+
+<h2 style="font-family: Papyrus;color: maroon">Your  WishList  Has  Following  Products</h2>
+
+
+
+
+
 <div ng-repeat="product in model.wishList._products">
 
     <div class="panel panel-default">
@@ -67,11 +74,12 @@
                 <li class="list-group-item">
                     Product Company : {{product.company}}
                 </li>
+                <li class="list-group-item">
+                    Product Price : {{product.price}}
+                </li>
             </div>
 
-            <div class="col-sm-6">
-                <a ng-click = "model.removeProductFromList(product)" class="fa fa-trash-o fa-2x pull-right" aria-hidden="true"></a>
-            </div>
+            <i class="fa fa-heart fa-3x pull-right" style="color: red"></i>
         </div>
     </div>
 </div>

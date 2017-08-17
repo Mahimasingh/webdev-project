@@ -52,12 +52,12 @@
         </div>
     </div><!-- /.container-fluid -->
 </nav>
-<h1>Your Orders in Shopping Cart</h1><br>
+<h1 style="font-family: Papyrus; color: maroon">Your Orders in Shopping Cart</h1><br>
 <div ng-repeat="order in model.shoppingCart._orders">
 
     <div class="panel panel-default">
-        <div class="panel-heading"> Date Created : {{order.dateCreated | date : 'short'}}</div>
-        <div class="panel-heading"> Total Amount : {{order.amount}}</div>
+        <div class="panel-heading" style="color: maroon"> Date Created : {{order.dateCreated | date : 'short'}}</div>
+        <div class="panel-heading"> Total Amount : ${{order.amount}}</div>
         <div class="panel-heading"> Quantity : {{order.quantity}}</div>
 
 
@@ -75,6 +75,9 @@
                 </li>
                 <li class="list-group-item">
                 {{order._product.company}}
+                </li>
+                <li class="list-group-item">
+                    ${{order._product.price}}
                 </li>
             </div>
 

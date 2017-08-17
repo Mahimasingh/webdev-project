@@ -1,5 +1,5 @@
 .home-view{
-    background: url(../../../background.jpg) no-repeat center center fixed;
+    background: url(../../../images/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,7 +20,7 @@
 .username
 {
     width: 50%;
-    font-family: Calibri;
+    font-family: Papyrus;
     font-size: 20px;
     color: #843534;
 }
@@ -28,13 +28,24 @@
 .password
 {
     width: 50%;
-    font-family: Calibri;
+    font-family: Papyrus;
     font-size: 20px;
     color: #843534;
 }
 
 .container-fluid.pull-right.username.facebook-icon{
     margin-top : auto;
+
+}
+
+.register-page{
+    background-color: #c9e2b3;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
 
 }
 

@@ -17,6 +17,7 @@
                 .then(function (response) {
 
                     var _users = response.data;
+                    var _buyers = [];
 
                     for(var u in _users){
 
@@ -25,7 +26,13 @@
                     }
 
                     _users.splice(index,1);
-                    model.users = _users;
+
+                    for(var i in _users){
+                        if(_users[i].type == 'BUYER'){
+                            _buyers.push(_users[i]);
+                        }
+                    }
+                    model.users = _buyers;
 
                 })
         }
