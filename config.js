@@ -12,6 +12,11 @@
             controllerAs : "model"
 
             })
+            .when("/contact", {
+                templateUrl: "public/views/templates/home/homeViews/contact.html"
+
+
+            })
 
 
             .when("/register", {

@@ -42,7 +42,7 @@
                 </li>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="contact.html"><h3 style="color : maroon">Contact Us</h3></a></li></ul>
+                    <li><a href="#!/contact"><h3 style="color : maroon">Contact Us</h3></a></li></ul>
 
 
 
@@ -72,7 +72,7 @@
 
             <div class="col-sm-3 col-xs-12">
                 <div class="card" style="width:100%;border: 1px;">
-                    <img class="card-img-top" width="100%" height="200px" ng-src="{{order._product.url}}" alt="Card image cap">
+                    <img ng-show="order._product.url" class="card-img-top" width="100%" height="200px" ng-src="{{order._product.url}}" alt="Card image cap">
                 </div>
             </div>
 
