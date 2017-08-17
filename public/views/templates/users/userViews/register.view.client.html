@@ -87,6 +87,7 @@
     <label style="color: maroon" for="verify password">Verify Password</label>
     <input name ="verify password"
            type="password"
+           ng-model = "password2"
            class="form-control"
            id="verify password"
            placeholder="pdr$%^G"/>
@@ -142,7 +143,7 @@
     <br>
     <div class="register-button">
     <a class="btn btn-default btn-block btn-primary"
-       ng-click="model.register(model.user)"
+       ng-click="model.register(model.user,password2)"
        role="button">Register</a>
     </div>
 

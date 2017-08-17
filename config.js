@@ -18,6 +18,12 @@
 
             })
 
+            .when("/ebay", {
+                templateUrl: "./ebay_search.html"
+
+
+            })
+
 
             .when("/register", {
                 templateUrl: "public/views/templates/users/userViews/register.view.client.html",

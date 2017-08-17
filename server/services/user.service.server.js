@@ -12,7 +12,7 @@ app.get("/api/users",getAllUsers);
 app.get("/api/user/:userId",getUserById);
 app.get("/api/user",findUser);
 app.post("/api/login",passport.authenticate('local'),login);
-app.post("/api/user",registerUser);
+app.post("/api/register",registerUser);
 app.put("/api/user/:userId",updateUser);
 app.delete("/api/user/:userId",deleteUser);
 app.put("/api/user/:userId/wishList/:wishListId", addToWishList);
@@ -136,13 +136,12 @@ function registerUser(req,response) {
 
     userModel
         .createUser(user)
-        .then(
-            function (user) {
-                response.json(user);
-            },
-            function (err) {
-                response.status(404).json({message: err.message});
-            });
+        .then(function (user) {
+            req
+                .login(user, function (status) {
+                    res.send(status);
+                })
+        });
 
 
 }

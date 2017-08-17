@@ -63,6 +63,8 @@
             </div>
             </ul>
 
+
+
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -70,9 +72,7 @@
                     <!-- Modal content-->
 
                     <div class="modal-content container-fluid">
-                        <div ng-show="model.errorMessage" class="alert alert-danger">
-                            {{model.errorMessage}}
-                        </div>
+
 
                             <br>
                         <div class="username">
@@ -115,6 +115,12 @@
                                role="button">Sign Up</a>
                         </div>
 
+                        <div class="modal-body">
+                        <div ng-show="model.errorMessage" class="alert alert-danger">
+                            {{model.errorMessage}}
+                        </div>
+                        </div>
+
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -135,6 +141,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
+
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->

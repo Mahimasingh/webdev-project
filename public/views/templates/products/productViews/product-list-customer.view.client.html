@@ -55,7 +55,9 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-
+<div ng-show="model.errorMessage" class="alert alert-danger">
+    {{model.errorMessage}}
+</div>
 <div class="col-sm-3 col-xs-12" ng-repeat="product in model.products">
     <div ng-show="product" class="card" style="width:100%;border: 1px;">
         <a href="#!/product/info/{{product._id}}">

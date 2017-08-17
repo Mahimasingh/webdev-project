@@ -13,7 +13,18 @@
         }
         init();
 
-        function register(user) {
+        function register(user,checkPassword) {
+
+            if(user.username === null || user.username === '' || typeof user.username === 'undefined') {
+                model.error = 'username is required';
+                return;
+            }
+
+            if(user.password !== checkPassword || user.password === null || typeof user.password === 'undefined') {
+                model.error = "passwords must match";
+                return;
+            }
+
             userService.findUserByUsername(user.username)
                 .then(function (response) {
                     var _user = response.data;

@@ -55,8 +55,12 @@
 
         function registerUser(user) {
 
-            var url = "/api/user";
-            return $http.post(url,user);
+            var url = "/api/register";
+            return $http.post(url,user)
+                .then(function (response) {
+                    return response.data;
+                });
+
 
         }
 

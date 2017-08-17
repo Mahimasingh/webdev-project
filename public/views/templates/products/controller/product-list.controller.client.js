@@ -29,6 +29,11 @@
                 return;
             }
 
+            if(!order.quantity){
+                model.errorMessage = "Please select number of products to be added to cart";
+                return;
+            }
+
             userService.login(user.username, user.password)
                 .then(function(foundUser){
                     if(product.quantity >= order.quantity){
