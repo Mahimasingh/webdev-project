@@ -16,9 +16,19 @@
 
         function login(user) {
             if(!user) {
-                model.errorMessage = "User not found";
+                model.errorMessage = "Username and passwords are mandatory";
                 return;
             }
+            if(user.username === null || user.username === '' || typeof user.username === 'undefined') {
+                model.errorMessage = 'username is required';
+                return;
+            }
+
+            if(user.password === null || typeof user.password === 'undefined') {
+                model.errorMessage = "passwords is required";
+                return;
+            }
+
 
             userService
                 .login(user.username, user.password)

@@ -59,9 +59,10 @@
         </div>
     </div><!-- /.container-fluid -->
 </nav>
-
+<div>
 <div ng-show="model.errorMessage" class="alert alert-danger">
     {{model.errorMessage}}
+</div>
 </div>
 <h1 class="container-fluid" style="font-family: Papyrus; color: maroon">Inside the Catalog...</h1><br><br>
 <div class="col-sm-3 col-xs-12" ng-repeat="product in model.products">
@@ -164,9 +165,7 @@
                     <div class="modal-content container-fluid">
                         <br>
                         <h3 style="font-family: Papyrus; color: maroon">Please login to your account to add to WishList</h3>
-                        <div ng-show="model.errorMessage" class="alert alert-danger">
-                            {{model.errorMessage}}
-                        </div>
+
 
                         <br>
                         <div class="username">

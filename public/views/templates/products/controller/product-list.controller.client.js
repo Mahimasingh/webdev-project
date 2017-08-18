@@ -25,14 +25,15 @@
         function loginAndCreateOrder(user,product,order) {
 
             if(!user) {
-                model.errorMessage = "User not found";
+                model.errorMessage = "Username and passwords are mandatory!";
                 return;
             }
 
-            if(!order.quantity){
-                model.errorMessage = "Please select number of products to be added to cart";
+            if(typeof order === 'undefined'){
+                model.errorMessage = "Please select number of products to be added to cart!";
                 return;
             }
+
 
             userService.login(user.username, user.password)
                 .then(function(foundUser){
@@ -48,7 +49,7 @@
 
                     else
                     {
-                        model.message = "Sorry! We are currently out of Stock for this product."
+                        model.errorMessage = "Sorry! We are currently out of Stock for this product."
                     }
                 })
             
@@ -57,7 +58,7 @@
         function loginAndAddToWishList(user,product) {
 
             if(!user) {
-                model.errorMessage = "User not found";
+                model.errorMessage = "Username and passwords are mandatory";
                 return;
             }
 

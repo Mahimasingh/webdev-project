@@ -89,6 +89,7 @@
                             <input name ="username"
                                    class="form-control"
                                    ng-model="model.user.username"
+                                   required
                                    id="username"
                                    placeholder="alice"/>
                         </div>
@@ -100,6 +101,7 @@
                                    type="password"
                                    class="form-control"
                                    ng-model="model.user.password"
+                                   required
                                    id="password"
                                    placeholder="p#$%vd"/>
 
@@ -111,7 +113,6 @@
 
                             <button type="button"
                                     class="btn btn-default btn-primary btn-block"
-
                                     data-toggle="modal"
                                     ng-click="model.login(model.user)"
                                     data-target="#myModal">Login</button>
@@ -121,13 +122,12 @@
                         <div class="sign-up-button">
                             <a class="btn btn-default btn-block btn-success"
                                href="#!/register"
+                               data-toggle="modal"
                                role="button">Sign Up</a>
                         </div>
 
                         <div class="modal-body">
-                        <div ng-show="model.errorMessage" class="alert alert-danger">
-                            {{model.errorMessage}}
-                        </div>
+
                         </div>
 
 
@@ -149,6 +149,11 @@
 
     </div><!-- /.container-fluid -->
 </nav>
+<div>
+    <div ng-show="model.errorMessage" class="alert alert-danger">
+        {{model.errorMessage}}
+    </div>
+</div>
 <div class="container">
 
 
