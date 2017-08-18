@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5e4da70-1bc0-4685-8b8a-53859cfdd536" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/users/controllers/showOnlineUsers.controller.client.js" afterPath="$PROJECT_DIR$/public/views/templates/users/controllers/showOnlineUsers.controller.client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/user/user.schema.server.js" afterPath="$PROJECT_DIR$/server/models/user/user.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/wishList/wishList.schema.server.js" afterPath="$PROJECT_DIR$/server/models/wishList/wishList.schema.server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,17 +17,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user.schema.server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.schema.server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/models/user/user.schema.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state relative-caret-position="153">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.model.server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.model.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/models/user/user.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="155">
@@ -688,12 +686,12 @@
       <workItem from="1502389270472" duration="60493000" />
       <workItem from="1502726115102" duration="94211000" />
       <workItem from="1502980879408" duration="16689000" />
-      <workItem from="1503007605161" duration="22603000" />
+      <workItem from="1503007605161" duration="22721000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242538000" />
+    <option name="totallyTimeSpent" value="242656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1218,18 +1216,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/user/user.schema.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/models/user/user.model.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="26" column="93" lean-forward="false" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/user/user.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding />
         </state>
       </provider>
