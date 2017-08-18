@@ -27,6 +27,7 @@ function getWishListByUserId(userId) {
     return wishListModel
         .findOne({_user : userId})
         .populate('_products')
+        .populate('_user')
         .exec();
 
 }

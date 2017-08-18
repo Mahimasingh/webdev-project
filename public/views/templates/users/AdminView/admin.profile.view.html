@@ -183,13 +183,14 @@
         <!-- Modal content-->
 
             <div class="modal-content container-fluid">
-                <h1 style="color: maroon;font-family: Papyrus">WishLists</h1><br>
+                <h1 style="color: maroon;font-family: Papyrus">WishLists</h1>
+                <h3 style="color: maroon;font-family: Papyrus">Below are some popular products</h3><br>
                 <div ng-repeat="wishList in model.wishLists">
 
                     <div ng-repeat="product in wishList._products">
 
                     <div class="panel panel-default">
-                        <div class="panel-heading"></div>
+                        <div style="background-color: maroon; color: white; font-family: Papyrus" class="panel-heading">{{wishList._user.firstName}} {{wishList._user.lastName}} </div>
                         <div class="panel-body">
 
                             <div class="col-sm-3 col-xs-12">
