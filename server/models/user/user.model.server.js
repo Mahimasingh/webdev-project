@@ -23,23 +23,17 @@ function findUserByGoogleId(googleId) {
 }
 
 function deleteWishListFromFollowingArray(userId,wishListId) {
-    return userModel.findUserById(userId)
-        .then(function (user) {
-            var index = user.follow_wishlist.indexOf(wishListId);
-            user.follow_wishlist.splice(index,1);
-            return user.save();
 
-        })
+    return userModel.update( {_id: userId}, { $pullAll: {follow_wishlist: [wishListId] } } );
+
+
 
 }
 
 function addToWishListArray(userId,wishListId) {
-    return userModel.findUserById(userId)
-        .then(function (user) {
-            user.follow_wishlist.push(wishListId);
-            return user.save();
 
-        })
+    return userModel.update( {_id: userId}, {$push: {follow_wishlist: wishListId}}, {new: true});
+
 
 }
 function getAllUsers() {
