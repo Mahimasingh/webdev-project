@@ -17,7 +17,7 @@ app.post("/api/register",registerUser);
 app.put("/api/user/:userId",updateUser);
 app.delete("/api/user/:userId",deleteUser);
 app.put("/api/user/:userId/wishList/:wishListId", addToWishList);
-app.delete("/api/user/:userId/wishList/:wishList",deleteFromWishList);
+app.delete("/api/user/:userId/wishList/:wishListId",deleteFromWishList);
 app.get("/api/checkLogin",checkLogin);
 app.get("/auth/google",passport.authenticate('google', { scope : ['profile', 'email'] }));
 app.get("/google/oath/callback",

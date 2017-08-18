@@ -24,8 +24,8 @@
         function removeWishListFromFollowing(wishListId) {
             userService.removeWishListFromArray(model.userId,wishListId)
                 .then(function (response) {
-                    model.message = 'Successfully Removed!';
-                    $location.url("#!/user/" + model.userId + "/likes");
+
+                    $location.url("/profile");
                 })
 
         }

@@ -48,7 +48,7 @@
                         })
                 .then(function (response) {
 
-                    model.message = "Added to your WishList";
+                    $location.url("/user/" + model.userId + "/wishList");
                 })
 
         }
