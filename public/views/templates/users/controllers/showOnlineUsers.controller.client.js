@@ -4,7 +4,7 @@
         .module("estiloApp")
         .controller("showUsersController", showUsersController);
 
-    function showUsersController($routeParams,userService,wishListService) {
+    function showUsersController($routeParams,userService,wishListService,$location) {
         var model = this;
         var userId = $routeParams["userId"];
         model.userId = userId;
@@ -48,7 +48,7 @@
                         })
                 .then(function (response) {
 
-                    $location.url("/user/" + model.userId + "/wishList");
+                    $location.url("/user/" + model.userId + "/likes");
                 })
 
         }
