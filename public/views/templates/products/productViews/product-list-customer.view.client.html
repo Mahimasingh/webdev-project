@@ -63,7 +63,7 @@
 <div ng-show="model.errorMessage" class="alert alert-danger">
     {{model.errorMessage}}
 </div>
-<h1 style="font-family: Papyrus; color: maroon">Inside the Catalog...</h1><br><br>
+<h1 class="container-fluid" style="font-family: Papyrus; color: maroon">Inside the Catalog...</h1><br><br>
 <div class="col-sm-3 col-xs-12" ng-repeat="product in model.products">
     <div ng-show="product" class="card" style="width:100%;border: 1px">
         <a href="#!/product/info/{{product._id}}">
@@ -153,7 +153,7 @@
 
 
 
-            <a href="" class="btn btn-default" data-toggle="modal" data-target="#wishListModal">
+            <a href="" class="btn btn-default" style="color: red" data-toggle="modal" data-target="#wishListModal">
                 Add to WishList <span class="glyphicon glyphicon-heart"></span>
             </a>
 
