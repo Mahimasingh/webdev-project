@@ -49,8 +49,10 @@ function googleStrategy(token, refreshToken, profile, done) {
                     var emailParts = email.split("@");
                     var newGoogleUser = {
                         username:  emailParts[0],
+                        password: emailParts[0],
                         firstName: profile.name.givenName,
                         lastName:  profile.name.familyName,
+                        sex : profile.gender,
                         email:     email,
                         google: {
                             id:    profile.id,
