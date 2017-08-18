@@ -39,7 +39,7 @@ function createWishList(userId) {
 function getWishLists() {
     return wishListModel
         .find({})
-        .populate('_product')
+        .populate('_products')
         .exec();
 
 
