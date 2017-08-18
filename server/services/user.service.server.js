@@ -27,12 +27,23 @@ app.get("/google/oath/callback",
     }));
 
 
+if(process.env.MONGODB_URI) { // check if running remotely
+    var googleConfig = {
+        clientID     : process.env.GOOGLE_CLIENT_ID,
+        clientSecret : process.env.GOOGLE_CLIENT_SECRET,
+        callbackURL  : process.env.GOOGLE_CALLBACK_URL
+    };
+}
+else{
 
-var googleConfig = {
-    clientID     : "860599412029-t2vhi30l0n4hg540c1l5eu9darnc8pcs.apps.googleusercontent.com",
-    clientSecret : "ROc3H3EmNKylmo8HLy8X0UnF",
-    callbackURL  : "http://127.0.0.1:3000/google/oath/callback"
-};
+    var googleConfig = {
+        clientID     : "860599412029-t2vhi30l0n4hg540c1l5eu9darnc8pcs.apps.googleusercontent.com",
+        clientSecret : "ROc3H3EmNKylmo8HLy8X0UnF",
+        callbackURL  : "http://127.0.0.1:3000/google/oath/callback"
+    };
+
+}
+
 
 passport.use(new GoogleStrategy(googleConfig, googleStrategy));
 

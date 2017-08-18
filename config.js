@@ -127,6 +127,7 @@
             controller: "productEditController",
             controllerAs: "model"
         })
+
     }
 
     function checkLogin(userService, $q, $location) {
