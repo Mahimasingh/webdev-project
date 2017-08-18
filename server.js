@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(morgan('dev'));
 app.use(app.express.static(__dirname));
+require("./server/services/user.service.server");
 
 var connectionString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/webdev_project'; // for local
 mongoose.connect(connectionString);

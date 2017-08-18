@@ -9,6 +9,10 @@ var userSchema = mongoose.Schema({
     lastName: String,
     email: String,
     sex: String,
+    google: {
+        id:  String,
+        token: String
+    },
     address: String,
     dateCreated: {type: Date, default: Date.now()},
     follow_wishlist: [{type: mongoose.Schema.Types.ObjectId, ref: "wishListModel"}],

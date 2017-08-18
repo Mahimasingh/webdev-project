@@ -1,6 +1,7 @@
 var app = require('../../express');
 var userModel = require("../models/user/user.model.server");
 var passport = require('passport');
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 var LocalStrategy = require('passport-local').Strategy;
 passport.use(new LocalStrategy(localStrategy));
@@ -17,7 +18,62 @@ app.put("/api/user/:userId",updateUser);
 app.delete("/api/user/:userId",deleteUser);
 app.put("/api/user/:userId/wishList/:wishListId", addToWishList);
 app.delete("/api/user/:userId/wishList/:wishList",deleteFromWishList);
-app.get("/api/checkLogin",checkLogin)
+app.get("/api/checkLogin",checkLogin);
+app.get("/auth/google",passport.authenticate('google', { scope : ['profile', 'email'] }));
+app.get("/google/oath/callback",
+    passport.authenticate('google', {
+        successRedirect: '/#!/profile',
+        failureRedirect: '/#!/'
+    }));
+
+
+
+var googleConfig = {
+    clientID     : "860599412029-t2vhi30l0n4hg540c1l5eu9darnc8pcs.apps.googleusercontent.com",
+    clientSecret : "ROc3H3EmNKylmo8HLy8X0UnF",
+    callbackURL  : "http://127.0.0.1:3000/google/oath/callback"
+};
+
+passport.use(new GoogleStrategy(googleConfig, googleStrategy));
+
+function googleStrategy(token, refreshToken, profile, done) {
+    console.log(profile);
+    userModel
+        .findUserByGoogleId(profile.id)
+        .then(
+            function(user) {
+                if(user) {
+                    return done(null, user);
+                } else {
+                    var email = profile.emails[0].value;
+                    var emailParts = email.split("@");
+                    var newGoogleUser = {
+                        username:  emailParts[0],
+                        firstName: profile.name.givenName,
+                        lastName:  profile.name.familyName,
+                        email:     email,
+                        google: {
+                            id:    profile.id,
+                            token: token
+                        }
+                    };
+                    return userModel.createUser(newGoogleUser);
+                }
+            },
+            function(err) {
+                if (err) { return done(err); }
+            }
+        )
+        .then(
+            function(user){
+
+                return done(null, user);
+            },
+            function(err){
+                if (err) { return done(err); }
+            }
+        );
+}
 
 function checkLogin(req,res) {
     res.send(req.isAuthenticated() ? req.user : '0');
@@ -41,6 +97,8 @@ function localStrategy(username, password, done) {
             }
         );
 }
+
+
 
 function deleteFromWishList(req,res) {
     var userId = req.params.userId;

@@ -13,8 +13,14 @@ userModel.deleteUserById = deleteUserById;
 userModel.getAllUsers = getAllUsers;
 userModel.addToWishListArray = addToWishListArray;
 userModel.deleteWishListFromFollowingArray = deleteWishListFromFollowingArray;
+userModel.findUserByGoogleId = findUserByGoogleId;
 
 module.exports = userModel;
+
+function findUserByGoogleId(googleId) {
+    return userModel.findOne({'google.id' : googleId});
+    
+}
 
 function deleteWishListFromFollowingArray(userId,wishListId) {
     return userModel.findUserById(userId)
